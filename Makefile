@@ -6,26 +6,24 @@
 #    By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 09:07:06 by hboumahd          #+#    #+#              #
-#    Updated: 2022/03/02 09:29:35 by hboumahd         ###   ########.fr        #
+#    Updated: 2022/03/02 11:02:56 by hboumahd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-PUSH_SWAP_FOLDER = ./push_swap/
-PUSH_SWAP_FILES = push_swap.c
-SRCS_PUSH_SWAP = $(addprefix $(PUSH_SWAP_FOLDER), $(SRC))
+SRCS_PUSH_SWAP = push_swap.c push_swap_utils.c
+OBJS_PUSH_SWAP = ${SRCS_PUSH_SWAP:.c=.o}
 
-FT_PRINTF_FOLDER = ./push_swap/ft_printf/
+
+FT_PRINTF_FOLDER = ./ft_printf/
 FT_PRINTF_FILES = ft_printf.c ft_putchar.c ft_putnbr_base.c ft_putstr.c ft_putnbr_base2.c ft_putnbr.c
 SRCS_FT_PRINTF = $(addprefix $(FT_PRINTF_FOLDER), $(FT_PRINTF_FILES))
+OBJS_FT_PRINTF = ${SRCS_FT_PRINTF:.c=.o}
 
-SRCS = $(SRCS_FT_PRINTF) $(SRCS_PUSH_SWAP)
-OBJS = ${OTHER_SRCS:.c=.o}
+LIBS = ./ft_printf.a 
 
-LIBS = ./push_swap/ft_printf.a 
-
-INCLUDES = ./push_swap/push_swap.h ./push_swap/ft_printf/ft_printf.h 
+INCLUDES = push_swap.h ./ft_printf/ft_printf.h 
 
 # -g for the debugger
 FLAGS = -Wall -Wextra -Werror 
@@ -34,18 +32,18 @@ CC = cc
 %.o : %.c ${INCLUDES}
 	$(CC) ${FLAGS} -c $< -o $@
 	
-$(NAME) : $(OBJS)
+$(NAME) : $(OBJS_PUSH_SWAP) $(SRCS_FT_PRINTF)
 	@$(MAKE) -C $(FT_PRINTF_FOLDER)
 	@echo "make the ft_printf.a" 
 	@echo "make the push_swap program"
-	@$(CC) $(OBJS) -o $(NAME)
+	@$(CC) $(OBJS_PUSH_SWAP) $(LIBS) -o $(NAME)
 
 all : $(NAME)  
 
 clean :
-	@rm -f $(LIBS) $(OBJS)
+	@rm -f $(LIBS) $(OBJS_FT_PRINTF) $(OBJS_PUSH_SWAP)
 
 fclean : clean
-	@rm -f ./push_swap/push_swap
+	@rm -f push_swap
 
 re : fclean all
