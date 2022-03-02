@@ -1,0 +1,18 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/hboumahd/Desktop/push_swap'
+/Library/Developer/CommandLineTools/usr/bin/make -C ./push_swap/ft_printf/
+make[1]: Entering directory `/Users/hboumahd/Desktop/push_swap/push_swap/ft_printf'
+cc  -Wall -Wextra -Werror -c ft_printf.c -o ft_printf.o
+cc  -Wall -Wextra -Werror -c ft_putchar.c -o ft_putchar.o
+cc  -Wall -Wextra -Werror -c ft_putnbr_base.c -o ft_putnbr_base.o
+cc  -Wall -Wextra -Werror -c ft_putstr.c -o ft_putstr.o
+cc  -Wall -Wextra -Werror -c ft_putnbr_base2.c -o ft_putnbr_base2.o
+cc  -Wall -Wextra -Werror -c ft_putnbr.c -o ft_putnbr.o
+ar rcs ft_printf.a ft_printf.o ft_putchar.o ft_putnbr_base.o ft_putstr.o ft_putnbr_base2.o ft_putnbr.o 
+mv ft_printf.a ..
+make[1]: Leaving directory `/Users/hboumahd/Desktop/push_swap/push_swap/ft_printf'
+echo "make the ft_printf.a" 
+echo "make the push_swap program"
+cc   -o push_swap
+make: Leaving directory `/Users/hboumahd/Desktop/push_swap'
+ 

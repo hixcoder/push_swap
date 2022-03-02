@@ -1,0 +1,307 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 3.81
+# Copyright (C) 2006  Free Software Foundation, Inc.
+# This is free software; see the source for copying conditions.
+# There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+
+# This program built for i386-apple-darwin11.3.0
+
+# Make data base, printed on Wed Mar  2 09:26:27 2022
+
+# Variables
+
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from `Makefile', line 28)
+INCLUDES = ./push_swap/push_swap.h ./push_swap/ft_printf/ft_printf.h 
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# automatic
+@F = $(notdir $@)
+# makefile
+CURDIR := /Users/hboumahd/Desktop/push_swap
+# makefile
+SHELL = /bin/sh
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /usr/bin/make
+# makefile (from `Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from `Makefile', line 24)
+OBJS = ${OTHER_SRCS:.c=.o}
+# makefile (from `Makefile', line 16)
+PUSH_SWAP_FILES = push_swap.c
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-cead93f5-6511-4753-acd0-1d8ecc32b6c9.sock
+# environment
+VSCODE_CWD = /Users/hboumahd/Desktop
+# environment
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.isjza7UbDd/Render
+# environment
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/hboumahd/goinfre/devtools/Android/sdk/tools/bin:/Users/hboumahd/goinfre/devtools/Android/sdk/emulator:/Users/hboumahd/goinfre/devtools/flutter/bin:/Users/hboumahd/goinfre/devtools/gradle/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/hboumahd/goinfre/devtools/jdk/Contents/Home/bin
+# environment
+VSCODE_LOG_STACK = false
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# default
+.FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
+# environment
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.qN79RM4lvJ/Listeners
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+PWD = /Users/hboumahd/Desktop/push_swap
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = undefined
+# makefile (from `Makefile', line 21)
+SRCS_FT_PRINTF = $(addprefix $(FT_PRINTF_FOLDER), $(FT_PRINTF_FILES))
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /Users/hboumahd
+# default
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+# environment
+VSCODE_CLI = 1
+# environment
+VSCODE_CODE_CACHE_PATH = /Users/hboumahd/Library/Application Support/Code/CachedData/ccbaa2d27e38e5afa3e5c21c1c7bef4657064247
+# environment
+LOGNAME = hboumahd
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+GRADLE_USER_HOME = /Users/hboumahd/goinfre/devtools/gradle
+# environment
+XPC_FLAGS = 0x0
+# environment
+COLORTERM = truecolor
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+LC_TERMINAL = iTerm2
+# makefile (from `Makefile', line 19)
+FT_PRINTF_FOLDER = ./push_swap/ft_printf/
+# makefile (from `Makefile', line 23)
+SRCS = $(SRCS_FT_PRINTF) $(SRCS_PUSH_SWAP)
+# environment
+SHLVL = 3
+# makefile (from `Makefile', line 32)
+CC = cc 
+# environment
+DEV_TOOLS = /Users/hboumahd/goinfre/devtools
+# environment
+JAVA_HOME = /Users/hboumahd/goinfre/devtools/jdk/Contents/Home
+# default
+MAKE_VERSION := 3.81
+# environment
+USER = hboumahd
+# makefile
+.DEFAULT_GOAL := push_swap
+# default
+MAKECMDGOALS := all
+# environment
+TERM_SESSION_ID = w0t0p0:2CFF8300-4122-493A-9032-3EDB98CBBA89
+# makefile (from `Makefile', line 13)
+NAME = push_swap
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# default
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+# environment
+TERM_PROGRAM = iTerm.app
+# default
+.VARIABLES := 
+# environment
+TMPDIR = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /Users/hboumahd/Library/Application Support/Code/1.62.3-main.sock
+# makefile
+MAKEFLAGS = Rrqp
+# environment
+MFLAGS = -Rrqp
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+TERM_PROGRAM_VERSION = 3.4.13
+# environment
+XPC_SERVICE_NAME = 0
+# environment
+LC_TERMINAL_VERSION = 3.4.13
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# automatic
++F = $(notdir $+)
+# environment
+ITERM_SESSION_ID = w0t0p0:2CFF8300-4122-493A-9032-3EDB98CBBA89
+# environment
+COLORFGBG = 7;0
+# environment
+__CF_USER_TEXT_ENCODING = 0x18D72:0:0
+# environment
+COMMAND_MODE = unix2003
+# default
+MAKEFILES := 
+# automatic
+<F = $(notdir $<)
+# environment
+ITERM_PROFILE = Default
+# environment
+APPS = /Users/hboumahd/goinfre/apps
+# environment
+ANDROID_SDK_ROOT = /Users/hboumahd/goinfre/devtools/Android/sdk
+# environment
+LC_ALL = C
+# makefile (from `Makefile', line 15)
+PUSH_SWAP_FOLDER = ./push_swap/
+# makefile (from `Makefile', line 26)
+LIBS = ./push_swap/ft_printf.a 
+# environment
+SECURITYSESSIONID = 186a8
+# automatic
+^F = $(notdir $^)
+# environment
+GRADLE_OPTS = -Dgradle.user.home=/Users/hboumahd/goinfre/devtools/gradle
+# makefile (from `Makefile', line 20)
+FT_PRINTF_FILES = ft_printf.c ft_putchar.c ft_putnbr_base.c ft_putstr.c ft_putnbr_base2.c ft_putnbr.c
+# default
+SUFFIXES := 
+# environment
+JAVA_17_HOME = /Users/hboumahd/goinfre/devtools/jdk/Contents/Home
+# makefile (from `Makefile', line 31)
+FLAGS = -Wall -Wextra -Werror 
+# makefile (from `Makefile', line 17)
+SRCS_PUSH_SWAP = $(addprefix $(PUSH_SWAP_FOLDER), $(SRC))
+# default
+.INCLUDE_DIRS = /usr/local/include
+# environment
+MAKELEVEL := 0
+# environment
+LANG = C
+# environment
+TERM = xterm-256color
+# environment
+VSCODE_PID = 35874
+# variable set hash-table stats:
+# Load=95/1024=9%, Rehash=0, Collisions=7/124=6%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 16777227, inode 1960669): 6 files, no impossibilities.
+
+# 6 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+%.o: %.c ./push_swap/push_swap.h ./push_swap/ft_printf/ft_printf.h
+#  commands to execute (from `Makefile', line 35):
+	$(CC) ${FLAGS} -c $< -o $@
+	
+
+# 1 implicit rules, 0 (0.0%) terminal.
+
+# Files
+
+all: push_swap
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-02 09:18:24
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+fclean: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 49):
+	@rm -f ${NAME} push_swap
+	
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+re: fclean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 46):
+	@rm -f $(LIBS) $(OBJS)
+	
+
+push_swap:
+#  Implicit rule search has not been done.
+#  Last modified 2022-03-02 09:19:35
+#  File has been updated.
+#  Successfully updated.
+#  commands to execute (from `Makefile', line 38):
+	@$(MAKE) -C $(FT_PRINTF_FOLDER)
+	@echo "make the ft_printf.a" 
+	@echo "make the push_swap program"
+	@$(CC) $(OBJS) -o $(NAME)
+	
+
+# files hash-table stats:
+# Load=8/1024=1%, Rehash=0, Collisions=0/25=0%
+# VPATH Search Paths
+
+# No `vpath' search paths.
+
+# No general (`VPATH' variable) search path.
+
+# # of strings in strcache: 1
+# # of strcache buffers: 1
+ 
+# strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
+# strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
+
+# Finished Make data base on Wed Mar  2 09:26:27 2022
+
+ 
