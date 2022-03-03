@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 10:45:50 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/03 22:22:56 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/03 22:56:48 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void ft_check_nbr(long *nbr, int sign, t_stack *s, int i)
         ft_error();
 	while (i >= 0)
 	{
-		if (*nbr == s->stack[i])
+		if (*nbr == s->stack_a[i])
 			ft_error();
 		i--;
 	}
@@ -85,18 +85,19 @@ void	ft_init_stack(t_stack	*s)
 {
 	int	i;
 	
-	if (s == NULL)
-		return ;
 	s->stack_len = ft_stack_len(s->av) - 1;
-	s->stack = (int *) malloc(sizeof(int) * s->stack_len);
-	if (s->stack == NULL)
+	s->stack_a = (int *) malloc(sizeof(int) * s->stack_len);
+	s->stack_b = (int *) malloc(sizeof(int) * s->stack_len);
+	if (s->stack_a == NULL || s->stack_b == NULL)
 	{
-		free(s->stack);
+		free(s->stack_a);
+		free(s->stack_b);
 		exit(0);
 	}
 	i = -1;
 	while (++i < s->stack_len)
 	{
-		s->stack[i] = ft_atoi(s->av[i + 1], s, i); 
+		s->stack_b[i] = 0;
+		s->stack_a[i] = ft_atoi(s->av[i + 1], s, i); 
 	}
 }
