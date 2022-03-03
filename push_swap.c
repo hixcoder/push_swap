@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/02 11:41:00 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/03 22:21:09 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 int main(int ac, char **av)
 {
-	int *stack;
+	t_stack	s;
 	
 	if (ac > 1)
 	{
-		stack = ft_init_stack(av);
-		if (stack == NULL)
-			return (0);
-		for (int i = 1; av[i]; i++)
+		s.av = av;
+		ft_init_stack(&s);	
+			
+		for (int i = 0; i < s.stack_len; i++)
 		{
-			ft_printf("%d\n", stack[i]);
+			ft_printf("stack[%d] = %d\n", i, s.stack[i]);
 		}
 	}
 	else
-		ft_printf("please enter the stack you wanna sort!\n");
+		return (0);
 }
