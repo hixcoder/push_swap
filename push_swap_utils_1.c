@@ -1,14 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap_utils.c                                  :+:      :+:    :+:   */
+/*   push_swap_utils_1.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 10:45:50 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/03 22:56:48 by hboumahd         ###   ########.fr       */
+/*   Created: 2022/03/04 10:13:41 by hboumahd          #+#    #+#             */
+/*   Updated: 2022/03/04 12:17:28 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "push_swap.h"
 
@@ -85,19 +86,15 @@ void	ft_init_stack(t_stack	*s)
 {
 	int	i;
 	
-	s->stack_len = ft_stack_len(s->av) - 1;
-	s->stack_a = (int *) malloc(sizeof(int) * s->stack_len);
-	s->stack_b = (int *) malloc(sizeof(int) * s->stack_len);
-	if (s->stack_a == NULL || s->stack_b == NULL)
+	s->stack_a_len = ft_stack_len(s->av) - 1;
+	s->stack_b_len = 0;
+	s->stack_a = (int *) malloc(sizeof(int) * s->stack_a_len);
+	if (s->stack_a == NULL)
 	{
 		free(s->stack_a);
-		free(s->stack_b);
-		exit(0);
+		exit(1);
 	}
 	i = -1;
-	while (++i < s->stack_len)
-	{
-		s->stack_b[i] = 0;
+	while (++i < s->stack_a_len)
 		s->stack_a[i] = ft_atoi(s->av[i + 1], s, i); 
-	}
 }

@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/03 22:37:15 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/04 12:03:33 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,28 @@
 
 typedef struct s_stack
 {
-    char    **av;
-    int     *stack_a;
-    int     *stack_b;
-    int     stack_len;    
+	char    **av;
+	int     *stack_a;
+	int     *stack_b;
+	int     stack_a_len;    
+	int     stack_b_len;    
 }   t_stack;
 
-int	ft_stack_len(char **av);
+int     ft_stack_len(char **av);
 void	ft_init_stack(t_stack	*stack);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
+
+void	ft_sa(t_stack *s);
+void	ft_sb(t_stack *s);
+void	ft_ss(t_stack *s);
+void	ft_pb(t_stack *s);
+void	ft_pa(t_stack *s);
+void    ft_ra(t_stack *s);
+void    ft_rb(t_stack *s);
+void    ft_rr(t_stack *s);
+void    ft_rra(t_stack *s);
+void    ft_rrb(t_stack *s);
+void    ft_rrr(t_stack *s);
+
 
 #endif
