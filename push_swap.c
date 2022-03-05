@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/05 12:17:57 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/05 13:33:27 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,26 @@ void tester(t_stack *s)
 		ft_printf("stack_b[%d] = %d\n", i, s->stack_b[i]);
 }
 
+void ft_sortalgo(t_stack *s)
+{
+	int i;
+
+	i = 0;
+
+	ft_sa(s);
+	ft_pb(s);
+	ft_pb(s);
+	ft_pb(s);
+	ft_ra(s);
+	ft_rb(s);
+	ft_rra(s);
+	ft_rrb(s);
+	ft_sa(s);
+	ft_pa(s);
+	ft_pa(s);
+	ft_pa(s);
+}
+
 int main(int ac, char **av)
 {
 	t_stack	s;
@@ -41,22 +61,10 @@ int main(int ac, char **av)
 		ft_init_stack(&s);
 
 		// here you write your algo for sort the stack
-		ft_sa(&s);
-		ft_pb(&s);
-		ft_pb(&s);
-		ft_pb(&s);
-		ft_ra(&s);
-		ft_rb(&s);
-		ft_rra(&s);
-		ft_rrb(&s);
-		ft_sa(&s);
-		ft_pa(&s);
-		ft_pa(&s);
-		ft_pa(&s);
-		
+		ft_sortalgo(&s);
+	
 		// here you test it
 		tester(&s);
-
 	}
 	else
 		return (0);

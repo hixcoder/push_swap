@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/04 10:14:43 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/05 13:48:31 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,3 +32,5 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+
+// implement the selection sort algorithm
