@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:47:29 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/04 11:13:56 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/05 12:07:41 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void ft_sa(t_stack *s)
 	{
 		temp = s->stack_a[0];
 		s->stack_a[0] = s->stack_a[1];
-		s->stack_a[1] = temp;   
+		s->stack_a[1] = temp;
+		ft_printf("sa\n");
 	}
 	else
 		return ;
@@ -41,7 +42,8 @@ void ft_sb(t_stack *s)
 	{
 		temp = s->stack_b[0];
 		s->stack_b[0] = s->stack_b[1];
-		s->stack_b[1] = temp;  
+		s->stack_b[1] = temp;
+		ft_printf("sb\n"); 
 	}
 	else
 		return ;
@@ -52,8 +54,23 @@ void ft_sb(t_stack *s)
 */
 void ft_ss(t_stack *s)
 {
-	ft_sa(s);
-	ft_sb(s);
+	int temp;
+	
+	ft_printf("ss\n");
+	if (s->stack_a_len > 1)
+	{
+		temp = s->stack_a[0];
+		s->stack_a[0] = s->stack_a[1];
+		s->stack_a[1] = temp;
+	}
+	if (s->stack_b_len > 1)
+	{
+		temp = s->stack_b[0];
+		s->stack_b[0] = s->stack_b[1];
+		s->stack_b[1] = temp;
+	}
+	else
+		return ;
 }
 
 /*
@@ -84,6 +101,7 @@ void ft_pb(t_stack *s)
 		s->stack_b[0] = stack_a_temp[0];
 		ft_memcpy(&s->stack_b[1], stack_b_temp, sizeof(int) * (s->stack_b_len - 1));
 		ft_memcpy(s->stack_a, &stack_a_temp[1], sizeof(int) * s->stack_a_len);
+		ft_printf("pb\n");
 	}
 	else
 		return ;
@@ -117,6 +135,7 @@ void ft_pa(t_stack *s)
 		s->stack_a[0] = stack_b_temp[0];
 		ft_memcpy(&s->stack_a[1], stack_a_temp, sizeof(int) * (s->stack_a_len - 1));
 		ft_memcpy(s->stack_b, &stack_b_temp[1], sizeof(int) * s->stack_b_len);
+		ft_printf("pa\n");
 	}
 	else
 		return ;
