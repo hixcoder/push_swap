@@ -1,0 +1,14 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/hboumahd/Desktop/push_swap'
+cc  -Wall -Wextra -Werror  -c push_swap.c -o push_swap.o
+ 
+cc  -Wall -Wextra -Werror  -c stack_init.c -o stack_init.o
+ 
+cc  -Wall -Wextra -Werror  -c instructions_1.c -o instructions_1.o
+cc  -Wall -Wextra -Werror  -c instructions_2.c -o instructions_2.o
+cc  -Wall -Wextra -Werror  -c instructions_3.c -o instructions_3.o
+ 
+make: *** No rule to make target `push_swap_utils_1.o', needed by `push_swap'.
+ 
+make: Leaving directory `/Users/hboumahd/Desktop/push_swap'
+ 

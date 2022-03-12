@@ -5,96 +5,66 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/04 10:13:41 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/05 12:30:52 by hboumahd         ###   ########.fr       */
+/*   Created: 2022/03/04 10:13:53 by hboumahd          #+#    #+#             */
+/*   Updated: 2022/03/12 04:42:17 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "push_swap.h"
 
-/*	
-	this func exit the program if :
- 		->the nbr is not integer (string)
- 		->the nbr is not in the range of integers (long)
- 		->the nbr is already exist (duplication).
-*/
-void    ft_error()
-{
-    ft_printf("Error\n");
-    exit(1);
-}
 
-/*	
-	this func check 2 things:
- 	if the nbr is not integer (long)
- 	if the nbr is already exist or not
-*/
-void ft_check_nbr(long *nbr, int sign, t_stack *s, int i)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	*nbr = (*nbr) * sign;
-    if (*nbr < -2147483648 || *nbr > 2147483647)
-        ft_error();
-	while (i >= 0)
-	{
-		if (*nbr == s->stack_a[i])
-			ft_error();
-		i--;
-	}
-}
+	size_t			i;
+	unsigned char	*pdst;
+	unsigned char	*psrc;
 
-int	ft_atoi(const char *str, t_stack *s, int index)
-{
-	int	    i;
-	long	nbr;
-	int 	sign;
-
+	pdst = (unsigned char *)dst;
+	psrc = (unsigned char *)src;
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	i = 0;
-	nbr = 0;
-	sign = 1;
-	while (str[i] != '\0' && (str[i] == ' ' || str[i] == '\t'
-			|| str[i] == '\n' || str[i] == '\v' || str[i] == '\f'
-			|| str[i] == '\r'))
+	while (i < n)
+	{
+		pdst[i] = psrc[i];
 		i++;
-	if (str[i] == '+' || str[i] == '-')
-	{
-		if (str[i++] == '-')
-			sign = -1;
 	}
-	while (str[i] != '\0')
-	{
-		if (str[i] >= '0' && str[i] <= '9')
-			nbr = nbr * 10 + (str[i++] - '0');
-		else
-			ft_error();
-	}
-    ft_check_nbr(&nbr, sign, s, index);
-	return ((int) nbr);
+	return (dst);
 }
 
-int	ft_stack_len(char **av)
+void	ft_swap(int *a, int *b)
+{
+	int	tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+// implement the selection sort algorithm
+void ft_sortalgo(t_stack *s)
 {
 	int i;
-
-	i = 1;
-	while (av[i])
-		i++;
-	return (i);
-}
-
-void	ft_init_stack(t_stack	*s)
-{
-	int	i;
+	int	j;
 	
-	s->stack_a_len = ft_stack_len(s->av) - 1;
-	s->stack_b_len = 0;
-	s->stack_a = (int *) malloc(sizeof(int) * s->stack_a_len);
-	if (s->stack_a == NULL)
+	s->stack_sorted = (int *) malloc(sizeof(int) * s->stack_a_len);
+	if (s->stack_sorted == NULL)
 	{
 		free(s->stack_a);
 		exit(1);
 	}
+	ft_memcpy(s->stack_sorted, s->stack_a, sizeof(int) * s->stack_a_len);
 	i = -1;
-	while (++i < s->stack_a_len)
-		s->stack_a[i] = ft_atoi(s->av[i + 1], s, i); 
+	while(++i < s->stack_a_len)
+	{
+		j = i + 1;
+		while (j < s->stack_a_len)
+		{
+			if (s->stack_sorted[i] > s->stack_sorted[j])
+				ft_swap(&s->stack_sorted[i], &s->stack_sorted[j]);
+			j++;
+		}	
+	}
+
 }
