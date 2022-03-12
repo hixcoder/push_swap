@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:41 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/12 04:42:36 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/12 05:06:44 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,7 @@ void    ft_error()
     exit(1);
 }
 
-/*	
-	this func check 2 things:
- 	if the nbr is not integer (long)
- 	if the nbr is already exist or not
-*/
-void ft_check_nbr(long *nbr, int sign, t_stack *s, int i)
-{
-	*nbr = (*nbr) * sign;
-    if (*nbr < -2147483648 || *nbr > 2147483647)
-        ft_error();
-	while (i >= 0)
-	{
-		ft_printf("nbr= %d    =vs=    s->stack_a[%d]= %d\n",*nbr, i, s->stack_a[i]);
-		if (*nbr == s->stack_a[i])
-			ft_error();
-		i--;
-	}
-}
-
-int	ft_atoi(const char *str, t_stack *s, int index)
+int	ft_atoi(const char *str)
 {
 	int	    i;
 	long	nbr;
@@ -65,7 +46,9 @@ int	ft_atoi(const char *str, t_stack *s, int index)
 		else
 			ft_error();
 	}
-    ft_check_nbr(&nbr, sign, s, index);
+	nbr = nbr * sign;
+    if (nbr < -2147483648 || nbr > 2147483647)
+        ft_error();
 	return ((int) nbr);
 }
 
@@ -77,6 +60,23 @@ int	ft_stack_len(char **av)
 	while (av[i])
 		i++;
 	return (i);
+}
+
+void	ft_check_dup(t_stack *s)
+{
+	int i;
+	int j;
+	
+	i = -1;
+	while (++i < s->stack_a_len)
+	{
+		j = i;
+		while (++j < s->stack_a_len)
+		{
+			if (s->stack_a[i] == s->stack_a[j])
+				ft_error();
+		}
+	}
 }
 
 void	ft_init_stack(t_stack	*s)
@@ -93,6 +93,7 @@ void	ft_init_stack(t_stack	*s)
 	}
 	i = -1;
 	while (++i < s->stack_a_len)
-		s->stack_a[i] = ft_atoi(s->av[i + 1], s, i);
+		s->stack_a[i] = ft_atoi(s->av[i + 1]);
+	ft_check_dup(s);
 	ft_sortalgo(s);
 }
