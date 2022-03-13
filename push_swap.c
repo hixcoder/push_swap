@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/12 03:53:13 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/13 13:04:37 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@ void tester(t_stack *s, int i)
 		for (int i = 0; i < s->stack_a_len; i++)
 			ft_printf("stack_sorted[%d] = %d\n", i, s->stack_sorted[i]);
 		ft_printf("\n\n");
+		ft_printf("==> my algo:\n");
 	}
 	else if (i == 2)
 	{
 		// after ft_pb
-		ft_printf("==> After:\n");
+		ft_printf("\n\n==> After:\n");
 		for (int i = 0; i < s->stack_a_len; i++)
 			ft_printf("stack_a[%d] = %d\n", i, s->stack_a[i]);
 		ft_printf("\n");
@@ -69,13 +70,19 @@ int main(int ac, char **av)
 		ft_init_stack(&s);
 		if (s.stack_a_len == 1)
 			return (0);
-		tester(&s, 1);
+		// tester(&s, 1);
 
 		// here you write your algo for sort the stack
-		ft_mysort(&s);
+		if (s.stack_a_len == 3)
+			ft_sort_three(&s);
+		else if (s.stack_a_len == 5)
+			ft_sort_five(&s);
+		else
+			ft_mysort(&s);
 		
 		// here you test it
-		tester(&s, 2);
+		// ft_printf("hello\n");
+		// tester(&s, 2);
 		// while (1);
 		
 	}

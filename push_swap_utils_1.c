@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/12 04:42:17 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/13 12:22:42 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,28 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	return (dst);
 }
 
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
+{
+	size_t			i;
+	unsigned char	str1;
+	unsigned char	str2;
+	unsigned char	*ps1;
+	unsigned char	*ps2;
+
+	i = 0;
+	ps1 = (unsigned char *)s1;
+	ps2 = (unsigned char *)s2;
+	while (i < n)
+	{
+		str1 = ps1[i];
+		str2 = ps2[i];
+		if (str1 != str2)
+			return (str1 - str2);
+		i++;
+	}
+	return (0);
+}
+
 void	ft_swap(int *a, int *b)
 {
 	int	tmp;
@@ -48,6 +70,7 @@ void ft_sortalgo(t_stack *s)
 	int i;
 	int	j;
 	
+	s->sorted_len = s->stack_a_len;
 	s->stack_sorted = (int *) malloc(sizeof(int) * s->stack_a_len);
 	if (s->stack_sorted == NULL)
 	{
@@ -66,5 +89,4 @@ void ft_sortalgo(t_stack *s)
 			j++;
 		}	
 	}
-
 }

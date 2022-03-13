@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:41 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/12 05:06:44 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/13 09:25:41 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,15 @@ void	ft_check_dup(t_stack *s)
 	}
 }
 
+void	ft_is_sorted(t_stack *s)
+{
+	int cmp;
+
+	cmp = ft_memcmp(s->stack_a, s->stack_sorted, s->stack_a_len * sizeof(int));
+	if (cmp == 0)
+		exit(0);
+}
+
 void	ft_init_stack(t_stack	*s)
 {
 	int	i;
@@ -96,4 +105,5 @@ void	ft_init_stack(t_stack	*s)
 		s->stack_a[i] = ft_atoi(s->av[i + 1]);
 	ft_check_dup(s);
 	ft_sortalgo(s);
+	ft_is_sorted(s);
 }

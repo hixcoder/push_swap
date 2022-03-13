@@ -1,14 +1,16 @@
 make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/hboumahd/Desktop/push_swap'
-cc  -Wall -Wextra -Werror  -c push_swap.c -o push_swap.o
+cc  -Wall -Wextra -Werror  -c sort_five.c -o sort_five.o
  
-cc  -Wall -Wextra -Werror  -c stack_init.c -o stack_init.o
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -C ./ft_printf/
  
-cc  -Wall -Wextra -Werror  -c instructions_1.c -o instructions_1.o
-cc  -Wall -Wextra -Werror  -c instructions_2.c -o instructions_2.o
-cc  -Wall -Wextra -Werror  -c instructions_3.c -o instructions_3.o
+make[1]: Entering directory `/Users/hboumahd/Desktop/push_swap/ft_printf'
+ar rcs ft_printf.a ft_printf.o ft_putchar.o ft_putnbr_base.o ft_putstr.o ft_putnbr_base2.o ft_putnbr.o 
+mv ft_printf.a ..
+make[1]: Leaving directory `/Users/hboumahd/Desktop/push_swap/ft_printf'
  
-make: *** No rule to make target `push_swap_utils_1.o', needed by `push_swap'.
- 
+echo "make the ft_printf.a" 
+echo "make the push_swap program"
+cc  push_swap.o stack_init.o push_swap_utils_1.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o ./ft_printf.a  -o push_swap
 make: Leaving directory `/Users/hboumahd/Desktop/push_swap'
  
