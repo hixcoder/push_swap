@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/13 12:21:35 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/14 15:14:27 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ typedef struct s_stack
 
 	int		*stack_sorted;
 	int		sorted_len;
-	int		index_mid_a;
-	int		index_min_a;
+	int		index_mid;
+	int		index_min;
+	int		index_max;
 }   t_stack;
 
 int     ft_stack_len(char **av);

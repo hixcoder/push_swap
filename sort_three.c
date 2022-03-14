@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 10:01:20 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/13 10:43:16 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/14 15:37:33 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,6 @@ void ft_sort_three(t_stack *s)
         ft_ra(s);
     else if (t[0] < t[1] && t[1] > t[2] && t[2] < t[0])
         ft_rra(s);
+    else
+        return ;
 }
