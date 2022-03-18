@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/14 17:46:08 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/18 18:41:04 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ void tester(t_stack *s, int i)
 	}
 }
 
+// Insertion Sort algorithm
 void	ft_mysort(t_stack *s)
 {
 	int	j;
@@ -77,6 +78,8 @@ int main(int ac, char **av)
 			ft_sort_three(&s);
 		else if (s.stack_a_len == 5)
 			ft_sort_five(&s);
+		else if (s.stack_a_len == 100)
+			ft_sort_handred(&s);
 		else
 			ft_mysort(&s);
 		
@@ -84,7 +87,6 @@ int main(int ac, char **av)
 		// ft_printf("hello\n");
 		// tester(&s, 2);
 		// while (1);
-		
 	}
 	else
 		return (0);

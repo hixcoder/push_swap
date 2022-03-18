@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/14 15:14:27 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/16 21:02:51 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,13 @@ typedef struct s_stack
 	int		index_max;
 }   t_stack;
 
+typedef struct s_scanned_nbr
+{
+	int		nbr;
+	int		moves_needed;
+	char	*moves_type;
+}	t_scanned_nbr;
+
 int     ft_stack_len(char **av);
 void	ft_init_stack(t_stack	*stack);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -38,6 +45,7 @@ void	ft_sortalgo(t_stack *s);
 
 void ft_sort_three(t_stack *s);
 void ft_sort_five(t_stack *s);
+void	ft_sort_handred(t_stack *s);
 
 void	ft_sa(t_stack *s);
 void	ft_sb(t_stack *s);
