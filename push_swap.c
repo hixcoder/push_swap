@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/19 11:27:52 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/19 12:48:48 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int main(int ac, char **av)
 		ft_init_stack(&s);
 		if (s.stack_a_len == 1)
 			return (0);
-		// tester(&s, 1);
+		tester(&s, 1);
 
 		// here you write your algo for sort the stack
 		if (s.stack_a_len == 3)
@@ -87,8 +87,8 @@ int main(int ac, char **av)
 		
 		// here you test it
 		// ft_printf("hello\n");
-		// tester(&s, 2);
-		// while (1);
+		tester(&s, 2);
+		while (1);
 	}
 	else
 		return (0);
