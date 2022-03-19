@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/16 21:02:51 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/19 11:27:24 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,19 @@ typedef struct s_scanned_nbr
 	char	*moves_type;
 }	t_scanned_nbr;
 
+typedef struct s_chosen
+{
+	int	len;
+	int	*list;
+	int	nbr_index;
+}	t_chosen;
+
 int     ft_stack_len(char **av);
 void	ft_init_stack(t_stack	*stack);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_sortalgo(t_stack *s);
+void    ft_sort_general(t_stack *s);
 
 void ft_sort_three(t_stack *s);
 void ft_sort_five(t_stack *s);

@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/18 18:41:04 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/19 11:27:52 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ int main(int ac, char **av)
 			ft_sort_five(&s);
 		else if (s.stack_a_len == 100)
 			ft_sort_handred(&s);
+		else if (s.stack_a_len == 8)
+			ft_sort_general(&s);
 		else
 			ft_mysort(&s);
 		
