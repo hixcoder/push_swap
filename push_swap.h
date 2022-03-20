@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/19 11:27:24 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/20 12:25:54 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ typedef struct s_stack
 
 	int		*stack_sorted;
 	int		sorted_len;
-	int		index_mid;
-	int		index_min;
-	int		index_max;
+	int		mid;
+	int		min;
+	int		max;
 }   t_stack;
 
 typedef struct s_scanned_nbr
@@ -44,15 +44,24 @@ typedef struct s_chosen
 	int	nbr_index;
 }	t_chosen;
 
+typedef struct s_passed
+{
+	int go_to;
+	int your_place;
+}	t_passed;
+
 int     ft_stack_len(char **av);
 void	ft_init_stack(t_stack	*stack);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_sortalgo(t_stack *s);
-void    ft_sort_general(t_stack *s);
 
-void ft_sort_three(t_stack *s);
-void ft_sort_five(t_stack *s);
+void		ft_sort_general(t_stack *s);
+t_chosen	ft_find_chosen_list(t_stack *s);
+void		ft_push_the_unchosen_to_b(t_stack *s, t_chosen chosen);
+
+void	ft_sort_three(t_stack *s);
+void	ft_sort_five(t_stack *s);
 void	ft_sort_handred(t_stack *s);
 
 void	ft_sa(t_stack *s);

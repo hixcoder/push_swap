@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/13 12:22:42 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/20 10:10:48 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,7 @@ void ft_sortalgo(t_stack *s)
 			j++;
 		}	
 	}
+	s->mid = s->stack_sorted[s->sorted_len / 2];
+	s->max = s->stack_sorted[s->sorted_len - 1];
+	s->min = s->stack_sorted[0];
 }

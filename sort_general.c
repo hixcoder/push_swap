@@ -6,124 +6,99 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:44:06 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/19 12:49:58 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/20 13:49:47 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// i : is the index of the element that we will check it's list
-
-int ft_check_element_list(t_stack *s, int i)
-{
-	int len;
-	int	j;
-	int k;
-	int l;
-
-	len = 1;
-	j = i;
-	k = i;
-	while (++i < s->stack_a_len)
-	{
-		if (s->stack_a[i] > s->stack_a[j])
-		{
-			j = i;
-			len++;
-		}
-	}
-	l = -1;
-	while (++l < k)
-	{
-		if (s->stack_a[l] > s->stack_a[j])
-		{
-			j = l;
-			len++;
-		}
-	}
-	return (len);
-}
-
-void	ft_bring_element_list(t_stack *s, t_chosen *chosen)
+int moves_in_a(int nbr, t_stack *s, t_passed *k)
 {
 	int i;
-	int	j;
-	int k;
-	int l;
+	int mid_index;
+	int	moves;
 
+	mid_index = s->stack_a_len / 2;
+	k->your_place = 0;
+	if (s->stack_a[s->stack_a_len - 1] < nbr && s->stack_a[0] > nbr)
+		return (0);
 	i = 0;
-	j = chosen->nbr_index;
-	k = chosen->nbr_index;
-	chosen->list = (int *) malloc(sizeof(int) * chosen->len);
-	if (chosen->list == NULL)
-	{
-		free(chosen->list);
-		exit(1);
-	}
-	chosen->list[i] =  s->stack_a[chosen->nbr_index];
-	while (++chosen->nbr_index < s->stack_a_len)
-	{
-		if (s->stack_a[chosen->nbr_index] > s->stack_a[j])
-		{
-			j = chosen->nbr_index;
-			chosen->list[++i] = s->stack_a[chosen->nbr_index];
-		}
-	}
-	l = -1;
-	while (l++ < k)
-	{
-		if (s->stack_a[l] > s->stack_a[j])
-		{
-			j = l;
-			chosen->list[++i] = s->stack_a[l];
-		}
-	}
-}
-
-t_chosen	ft_find_chosen_list(t_stack *s)
-{
-	int i;
-	t_chosen j;
-
-	i = -1;
-	j.len = 0;
 	while (++i < s->stack_a_len)
 	{
-		if (j.len < ft_check_element_list(s, i))
+		if (s->stack_a[i] < nbr && s->stack_a[i + 1] > nbr)
 		{
-			j.nbr_index = i;
-			j.len = ft_check_element_list(s, i);
+			i++;
+			break ;
 		}
 	}
-	ft_bring_element_list(s, &j);
-	return (j);
+	if (i > mid_index)
+		moves = s->stack_a_len - i;
+	else
+		moves = i;
+	k->your_place = i;
+	return (moves);
 }
 
-int ft_is_in_chosen(t_chosen chosen, int nbr)
+int moves_in_b(int i, t_stack *s)
+{
+	int mid_index;
+	int	moves;
+
+	mid_index = s->stack_b_len / 2;
+	if (i > mid_index)
+		moves = s->stack_b_len - i;
+	else
+		moves = i;
+	return (moves);
+}
+
+/* I used this line: tmp_moves = moves_in_a(s->stack_b[k->go_to], s, k);
+* only for know the right value of k->your_place .
+*/
+void	ft_find_smallest_moves(t_stack *s, t_passed *k)
 {
 	int i;
+	int	moves;
+	int	tmp_moves;
 
 	i = -1;
-	while(++i < chosen.len)
+	moves = 2147483647;
+	while (++i < s->stack_b_len)
 	{
-		if (nbr == chosen.list[i])
-			return (1);
+		tmp_moves = moves_in_a(s->stack_b[i], s, k) + moves_in_b(i, s);
+		// ft_printf("tmp_moves = moves_in_a(s->stack_b[%d], s) + moves_in_b(%d, s) = %d + %d = %d\n", i, i, moves_in_a(s->stack_b[i], s, k), moves_in_b(i, s), moves_in_b(i, s) + moves_in_a(s->stack_b[i], s, k));
+		if (moves > tmp_moves)
+		{
+			moves = tmp_moves;
+			k->go_to = i;
+		}
 	}
-	return (0);
+	tmp_moves = moves_in_a(s->stack_b[k->go_to], s, k);
 }
 
-void	ft_push_the_unchosen(t_stack *s, t_chosen chosen)
+// void	ft_push_it_to_a(t_stack *s)
+// {
+// 	int 
+// }
+
+/*
+* i.go_to: is the index of the number that we will push to stack a.
+* i.your_place: is the index of the number that we must move it to top of a before 
+*               recieving the number with index i.go_to.
+*/
+void	ft_from_b_to_a(t_stack *s)
 {
-	int	i;
+	t_passed i;
 	
-	i = 0;
-	while (s->stack_a_len != chosen.len)
-	{
-		if (ft_is_in_chosen(chosen, s->stack_a[i]) == 0)
-			ft_pb(s);
-		else
-			ft_ra(s);
-	}
+	ft_find_smallest_moves(s, &i);
+	ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d\n", i.go_to , s->stack_b[i.go_to]);
+	ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n", i.your_place , s->stack_a[i.your_place]);
+	// ft_push_it_to_a(s->stack_b[i.go_to]);
+	// while (s->stack_b_len != 0)
+	// {
+	// 	i = ft_find_smallest_moves(s);
+	// 	ft_push_it_to_a(s->stack_b[i]);
+	// }	
 }
 
 void    ft_sort_general(t_stack *s)
@@ -132,8 +107,9 @@ void    ft_sort_general(t_stack *s)
 	t_chosen    chosen;
 
 	chosen = ft_find_chosen_list(s);
-	ft_push_the_unchosen(s, chosen);
+	ft_push_the_unchosen_to_b(s, chosen);
 	free(chosen.list);
+	ft_from_b_to_a(s);
 	
 	// ft_printf("\n\n");
 	// i = -1;
