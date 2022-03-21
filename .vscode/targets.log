@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Sun Mar 20 09:00:17 2022
+# Make data base, printed on Mon Mar 21 09:55:10 2022
 
 # Variables
 
@@ -20,7 +20,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
-# makefile (from `Makefile', line 28)
+# makefile (from `Makefile', line 30)
 INCLUDES = push_swap.h ./ft_printf/ft_printf.h 
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
@@ -40,14 +40,14 @@ MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-e440e12d-046c-47fe-98a9-8f8f16a5ecab.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-a02ed260-7dcf-4b14-a323-a3737e608a54.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.Zz6JvzVwvD/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.RD9wIlplIl/Render
 # environment
 PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/hboumahd/goinfre/devtools/Android/sdk/tools/bin:/Users/hboumahd/goinfre/devtools/Android/sdk/emulator:/Users/hboumahd/goinfre/devtools/flutter/bin:/Users/hboumahd/goinfre/devtools/gradle/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/hboumahd/goinfre/devtools/jdk/Contents/Home/bin
-# makefile (from `Makefile', line 18)
+# makefile (from `Makefile', line 20)
 OBJS_PUSH_SWAP = ${SRCS_PUSH_SWAP:.c=.o}
 # environment
 VSCODE_LOG_STACK = false
@@ -56,7 +56,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.jQpHMKpz44/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.RZHYdAlUj2/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -65,7 +65,7 @@ VSCODE_PIPE_LOGGING = true
 PWD = /Users/hboumahd/Desktop/push_swap
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = undefined
-# makefile (from `Makefile', line 23)
+# makefile (from `Makefile', line 25)
 SRCS_FT_PRINTF = $(addprefix $(FT_PRINTF_FOLDER), $(FT_PRINTF_FILES))
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
@@ -91,11 +91,11 @@ XPC_FLAGS = 0x0
 MAKE = $(MAKE_COMMAND)
 # default
 MAKECMDGOALS := all
-# makefile (from `Makefile', line 21)
+# makefile (from `Makefile', line 23)
 FT_PRINTF_FOLDER = ./ft_printf/
 # environment
 SHLVL = 1
-# makefile (from `Makefile', line 32)
+# makefile (from `Makefile', line 34)
 CC = cc 
 # environment
 DEV_TOOLS = /Users/hboumahd/goinfre/devtools
@@ -147,9 +147,9 @@ APPS = /Users/hboumahd/goinfre/apps
 ANDROID_SDK_ROOT = /Users/hboumahd/goinfre/devtools/Android/sdk
 # environment
 LC_ALL = C
-# makefile (from `Makefile', line 24)
-OBJS_FT_PRINTF = ${SRCS_FT_PRINTF:.c=.o}
 # makefile (from `Makefile', line 26)
+OBJS_FT_PRINTF = ${SRCS_FT_PRINTF:.c=.o}
+# makefile (from `Makefile', line 28)
 LIBS = ./ft_printf.a 
 # environment
 SECURITYSESSIONID = 186a8
@@ -157,16 +157,16 @@ SECURITYSESSIONID = 186a8
 ^F = $(notdir $^)
 # environment
 GRADLE_OPTS = -Dgradle.user.home=/Users/hboumahd/goinfre/devtools/gradle
-# makefile (from `Makefile', line 22)
+# makefile (from `Makefile', line 24)
 FT_PRINTF_FILES = ft_printf.c ft_putchar.c ft_putnbr_base.c ft_putstr.c ft_putnbr_base2.c ft_putnbr.c
 # default
 SUFFIXES := 
 # environment
 JAVA_17_HOME = /Users/hboumahd/goinfre/devtools/jdk/Contents/Home
-# makefile (from `Makefile', line 31)
+# makefile (from `Makefile', line 33)
 FLAGS = -Wall -Wextra -Werror 
 # makefile (from `Makefile', line 15)
-SRCS_PUSH_SWAP = push_swap.c stack_init.c push_swap_utils_1.c instructions_1.c instructions_2.c instructions_3.c sort_three.c sort_five.c sort_handred.c sort_general.c sort_general_utils_1.c 
+SRCS_PUSH_SWAP = push_swap.c stack_init.c push_swap_utils_1.c instructions_1.c instructions_2.c instructions_3.c sort_three.c sort_five.c sort_handred.c sort_general.c sort_utils_1.c sort_utils_2_part1.c sort_utils_2_part2.c
 # default
 .INCLUDE_DIRS = /usr/local/include
 # environment
@@ -174,7 +174,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 41130
+VSCODE_PID = 40736
 # variable set hash-table stats:
 # Load=81/1024=8%, Rehash=0, Collisions=3/117=3%
 
@@ -184,15 +184,16 @@ VSCODE_PID = 41130
 
 # Directories
 
-# . (device 16777227, inode 1978551): 34 files, no impossibilities.
+ 
+# . (device 16777227, inode 1978551): 36 files, no impossibilities.
 # ft_printf (device 16777227, inode 1978868): 4 files, no impossibilities so far.
 
-# 38 files, no impossibilities in 2 directories.
+# 40 files, no impossibilities in 2 directories.
 
 # Implicit Rules
 
 %.o: %.c push_swap.h ./ft_printf/ft_printf.h
-#  commands to execute (from `Makefile', line 35):
+#  commands to execute (from `Makefile', line 37):
 	$(CC) ${FLAGS} -c $< -o $@
 	
 
@@ -202,6 +203,12 @@ VSCODE_PID = 41130
 
 # Not a target:
 stack_init.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+sort_utils_2_part1.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -231,10 +238,15 @@ sort_general.o:
 #  File has not been updated.
 
 # Not a target:
+sort_utils_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 push_swap.h:
- 
 #  Implicit rule search has been done.
-#  Last modified 2022-03-20 08:59:49
+#  Last modified 2022-03-21 09:50:52
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -242,6 +254,12 @@ push_swap.h:
 
 # Not a target:
 ft_printf/ft_putnbr_base.c:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+sort_utils_2_part2.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -255,7 +273,7 @@ ft_printf/ft_putnbr_base.c:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-20 09:00:15
+#  Last modified 2022-03-21 09:55:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -263,12 +281,6 @@ Makefile:
 
 # Not a target:
 instructions_1.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-
-# Not a target:
-sort_general_utils_1.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -289,7 +301,7 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 49):
+#  commands to execute (from `Makefile', line 51):
 	@rm -f push_swap
 	
 
@@ -344,14 +356,14 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 46):
+#  commands to execute (from `Makefile', line 48):
 	@rm -f $(LIBS) $(OBJS_FT_PRINTF) $(OBJS_PUSH_SWAP)
 	
 
 push_swap.o: push_swap.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push_swap'
-#  Last modified 2022-03-20 08:46:30
+#  Last modified 2022-03-21 09:31:56
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # automatic
@@ -372,18 +384,18 @@ push_swap.o: push_swap.c push_swap.h ft_printf/ft_printf.h
 # ? := push_swap.h
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  commands to execute (from `Makefile', line 35):
+#  commands to execute (from `Makefile', line 37):
 	$(CC) ${FLAGS} -c $< -o $@
 	
 
-push_swap: push_swap.o stack_init.o push_swap_utils_1.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o sort_handred.o sort_general.o sort_general_utils_1.o ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_putnbr_base.c ft_printf/ft_putstr.c ft_printf/ft_putnbr_base2.c ft_printf/ft_putnbr.c
+push_swap: push_swap.o stack_init.o push_swap_utils_1.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o sort_handred.o sort_general.o sort_utils_1.o sort_utils_2_part1.o sort_utils_2_part2.o ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_putnbr_base.c ft_printf/ft_putstr.c ft_printf/ft_putnbr_base2.c ft_printf/ft_putnbr.c
 #  Implicit rule search has not been done.
-#  Last modified 2022-03-20 08:46:30
+#  Last modified 2022-03-21 09:43:01
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/4=0%
-#  commands to execute (from `Makefile', line 38):
+#  commands to execute (from `Makefile', line 40):
 	@$(MAKE) -C $(FT_PRINTF_FOLDER)
 	@echo "make the ft_printf.a" 
 	@echo "make the push_swap program"
@@ -418,7 +430,7 @@ sort_three.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=28/1024=3%, Rehash=0, Collisions=2/69=3%
+# Load=30/1024=3%, Rehash=0, Collisions=2/73=3%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -430,6 +442,6 @@ sort_three.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun Mar 20 09:00:17 2022
+# Finished Make data base on Mon Mar 21 09:55:10 2022
 
  

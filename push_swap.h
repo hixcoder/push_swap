@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/20 12:25:54 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/21 13:12:39 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,12 @@ void	ft_init_stack(t_stack	*stack);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_sortalgo(t_stack *s);
+int ft_get_min(int *list, int list_len);
 
 void		ft_sort_general(t_stack *s);
 t_chosen	ft_find_chosen_list(t_stack *s);
 void		ft_push_the_unchosen_to_b(t_stack *s, t_chosen chosen);
+void		ft_find_smallest_moves(t_stack *s, t_passed *k);
 
 void	ft_sort_three(t_stack *s);
 void	ft_sort_five(t_stack *s);

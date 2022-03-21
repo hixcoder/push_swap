@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/20 10:10:48 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/21 13:16:48 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,4 +92,20 @@ void ft_sortalgo(t_stack *s)
 	s->mid = s->stack_sorted[s->sorted_len / 2];
 	s->max = s->stack_sorted[s->sorted_len - 1];
 	s->min = s->stack_sorted[0];
+}
+
+// this func return the min in a list of int.
+int ft_get_min(int *list, int list_len)
+{
+	int i;
+	int j;
+	
+	j = list[0];
+	i = 0;
+	while (i++ < list_len)
+	{
+		if (list[i] < j)
+			j = list[i];
+	}
+	return (j);
 }

@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/20 08:46:28 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/21 11:18:37 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,11 @@ void tester(t_stack *s, int i)
 			ft_printf("stack_a[%d] = %d\n", i, s->stack_a[i]);
 		ft_printf("\n");
 		for (int i = 0; i < s->stack_b_len; i++)
-			ft_printf("stack_b[%d] = %d\n", i, s->stack_b[i]);	
+			ft_printf("stack_b[%d] = %d\n", i, s->stack_b[i]);
+		if (ft_memcmp(s->stack_sorted, s->stack_a, s->sorted_len * sizeof(int)) == 0)
+			ft_printf("\n\n=====> Your list is sorted, Congratulation!\n\n");
+		else
+			ft_printf("\n\n=====> Your list is not sorted, Sorry!\n\n");
 	}
 }
 
