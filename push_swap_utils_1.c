@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/21 13:16:48 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/21 15:48:56 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,7 +102,7 @@ int ft_get_min(int *list, int list_len)
 	
 	j = list[0];
 	i = 0;
-	while (i++ < list_len)
+	while (++i < list_len)
 	{
 		if (list[i] < j)
 			j = list[i];

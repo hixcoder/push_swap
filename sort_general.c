@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:44:06 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/21 13:23:24 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/21 15:50:09 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,17 +68,22 @@ void	ft_remove_min_from_b(t_stack *s)
 	int	i;
 	int	min_index_in_a;
 
-	i = 0;
-	while (i < s->stack_b_len && s->stack_b[i] != s->stack_sorted[0])
-		i++;
-	if (s->stack_b[i] == s->stack_sorted[0])
+	i = -1;
+	while (++i < s->stack_b_len)
 	{
-		min_index_in_a = ft_get_index_in_a(s, ft_get_min(s->stack_a, s->stack_a_len));
-		ft_printf("ft_get_min(s->stack_a, len) = %d\n\n", ft_get_min(s->stack_a, s->stack_a_len));
-		ft_printf("min_index_in_a = %d\n", min_index_in_a);
-		ft_move_to_top_of_a(s, min_index_in_a, s->stack_a[min_index_in_a]);
-		ft_move_to_top_of_b(s, i, s->stack_sorted[0]);
-		ft_pa(s);
+		// ft_printf("s->stack_b[i] = %d vs s->stack_sorted[0] = %d\n",s->stack_b[i],s->stack_sorted[0]);
+		if (s->stack_b[i] == s->stack_sorted[0])
+		{
+			// ft_printf("s->stack_b[i] = %d vs s->stack_sorted[0] = %d\n",s->stack_b[i],s->stack_sorted[0]);
+			min_index_in_a = ft_get_index_in_a(s, ft_get_min(s->stack_a, s->stack_a_len));
+			// ft_printf("ft_get_min(s->stack_a, s->stack_a_len) = %d\n\n", ft_get_min(s->stack_a, s->stack_a_len));
+			// ft_printf("min_index_in_a = %d\n\n", min_index_in_a);
+			
+			ft_move_to_top_of_a(s, min_index_in_a, s->stack_a[min_index_in_a]);
+			ft_move_to_top_of_b(s, i, s->stack_sorted[0]);
+			ft_pa(s);
+			break ;
+		}			
 	}
 }
 /*
@@ -91,17 +96,12 @@ void	ft_from_b_to_a(t_stack *s)
 	t_passed i;
 	int	min_index_in_a;
 	
-	
-	// ft_find_smallest_moves(s, &i);
-	// ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d\n", i.go_to , s->stack_b[i.go_to]);
-	// ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n", i.your_place , s->stack_a[i.your_place]);
-	// ft_push_it_to_a(s, i);
 	ft_remove_min_from_b(s);
 	while (s->stack_b_len != 0)
 	{
 		ft_find_smallest_moves(s, &i);
-		ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d\n", i.go_to , s->stack_b[i.go_to]);
-		ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n", i.your_place , s->stack_a[i.your_place]);
+	// 	ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d\n", i.go_to , s->stack_b[i.go_to]);
+	// ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n", i.your_place , s->stack_a[i.your_place]);
 		ft_push_it_to_a(s, i);
 	}
 	min_index_in_a = ft_get_index_in_a(s, s->stack_sorted[0]);
@@ -110,17 +110,10 @@ void	ft_from_b_to_a(t_stack *s)
 
 void    ft_sort_general(t_stack *s)
 {
-	int i;
 	t_chosen    chosen;
 
 	chosen = ft_find_chosen_list(s);
 	ft_push_the_unchosen_to_b(s, chosen);
-	ft_printf("\n\n");
-	i = -1;
-	while(++i < chosen.len){
-		ft_printf("chosen.list[%d] = %d\n", i, chosen.list[i]);
-	}
-	ft_printf("\n");
 	free(chosen.list);
 	ft_from_b_to_a(s);
 }

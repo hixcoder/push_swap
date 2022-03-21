@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:54:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/21 11:12:04 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/21 15:28:52 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	ft_find_smallest_moves(t_stack *s, t_passed *k)
 	while (++i < s->stack_b_len)
 	{
 		tmp_moves = moves_in_a(s->stack_b[i], s, k) + moves_in_b(i, s);
-		ft_printf("tmp_moves = moves_in_a(s->stack_b[%d] = %d, s) + moves_in_b(%d, s) = %d + %d = %d\n", i, s->stack_b[i], i, moves_in_a(s->stack_b[i], s, k), moves_in_b(i, s), moves_in_b(i, s) + moves_in_a(s->stack_b[i], s, k));
+		// ft_printf("tmp_moves = moves_in_a(s->stack_b[%d], s) + moves_in_b(%d, s) = %d + %d = %d\n", i, i, moves_in_a(s->stack_b[i], s, k), moves_in_b(i, s), moves_in_b(i, s) + moves_in_a(s->stack_b[i], s, k));
 		if (moves > tmp_moves)
 		{
 			moves = tmp_moves;
