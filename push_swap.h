@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/21 13:12:39 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/22 13:15:02 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,12 @@ typedef struct s_chosen
 
 typedef struct s_passed
 {
-	int go_to;
-	int your_place;
+	int		go_to;
+	int		your_place;
+	char	*a_move_type;
+	char	*b_move_type;
+	int		b_moves;
+	int		a_moves;
 }	t_passed;
 
 int     ft_stack_len(char **av);
@@ -56,6 +60,11 @@ void	*ft_memcpy(void *dst, const void *src, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_sortalgo(t_stack *s);
 int ft_get_min(int *list, int list_len);
+
+
+void tester(t_stack *s, int i);
+
+
 
 void		ft_sort_general(t_stack *s);
 t_chosen	ft_find_chosen_list(t_stack *s);

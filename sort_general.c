@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:44:06 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/21 15:50:09 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/22 14:19:04 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,46 @@ void	ft_move_to_top_of_b(t_stack *s, int i, int nbr)
 	}
 }
 
-void	ft_push_it_to_a(t_stack *s, t_passed i)
+void	ft_move_both(t_stack *s, int len, char *move_type, t_passed *i)
 {
 	int j;
 
-	j = 0;
-	ft_move_to_top_of_a(s, i.your_place, s->stack_a[i.your_place]);
-	ft_move_to_top_of_b(s, i.go_to, s->stack_b[i.go_to]);
+	j = -1;
+	// (void) i;
+	while (++j < len)
+	{
+		if (ft_memcmp(move_type, "ra", sizeof(char) * 2) == 0)
+		{
+			ft_rr(s);
+			i->your_place--;
+			i->go_to--;
+		}
+		else
+		{
+			ft_rrr(s);
+			i->your_place++;
+			i->go_to++;
+		}
+	}
+}
+
+void	ft_push_it_to_a(t_stack *s, t_passed *i)
+{
+	int	shared_moves;
+	(void) s;
+	if (i->a_moves > i->b_moves)
+		shared_moves = i->b_moves;
+	else
+		shared_moves = i->a_moves;
+	// ft_printf("i->b_moves = %d\ni->a_moves = %d\nshared_moves = %d\n\n",i->b_moves, i->a_moves, shared_moves);
+	if (i->a_move_type == i->b_move_type && shared_moves > 0)
+		ft_move_both(s, shared_moves, i->b_move_type, i);
+	if (i->a_moves != 0)
+		ft_move_to_top_of_a(s, i->your_place, s->stack_a[i->your_place]);
+	if (i->b_moves != 0)
+		ft_move_to_top_of_b(s, i->go_to, s->stack_b[i->go_to]);
 	ft_pa(s);
+	// tester(s, 2);
 }
 
 void	ft_remove_min_from_b(t_stack *s)
@@ -97,12 +129,39 @@ void	ft_from_b_to_a(t_stack *s)
 	int	min_index_in_a;
 	
 	ft_remove_min_from_b(s);
+	// ft_find_smallest_moves(s, &i);
+	// tester(s, 2);
+	// ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d", i.go_to , s->stack_b[i.go_to]);
+	// ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n\n", i.your_place , s->stack_a[i.your_place]);
+	// ft_push_it_to_a(s, &i);
+	
+	// ft_find_smallest_moves(s, &i);
+	// ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d", i.go_to , s->stack_b[i.go_to]);
+	// ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n\n", i.your_place , s->stack_a[i.your_place]);
+	// ft_push_it_to_a(s, &i);
+	
+	// ft_find_smallest_moves(s, &i);
+	// ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d", i.go_to , s->stack_b[i.go_to]);
+	// ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n\n", i.your_place , s->stack_a[i.your_place]);
+	// ft_push_it_to_a(s, &i);
+	
+	// ft_find_smallest_moves(s, &i);
+	// ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d", i.go_to , s->stack_b[i.go_to]);
+	// ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n\n", i.your_place , s->stack_a[i.your_place]);
+	// ft_push_it_to_a(s, &i);
+	
+	// ft_find_smallest_moves(s, &i);
+	// ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d", i.go_to , s->stack_b[i.go_to]);
+	// ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n\n", i.your_place , s->stack_a[i.your_place]);
+	// ft_push_it_to_a(s, &i);
+	
+	// ft_push_it_to_a(s, &i);
 	while (s->stack_b_len != 0)
 	{
 		ft_find_smallest_moves(s, &i);
 	// 	ft_printf("\nthe best number that need to go_to is : s->stack_b[%d] = %d\n", i.go_to , s->stack_b[i.go_to]);
 	// ft_printf("\nthe best number that is your_place is : s->stack_a[%d] = %d\n", i.your_place , s->stack_a[i.your_place]);
-		ft_push_it_to_a(s, i);
+		ft_push_it_to_a(s, &i);
 	}
 	min_index_in_a = ft_get_index_in_a(s, s->stack_sorted[0]);
 	ft_move_to_top_of_a(s, min_index_in_a, s->stack_sorted[0]);
