@@ -6,13 +6,13 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/13 10:49:50 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/21 14:36:54 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/23 12:54:25 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_get_index(t_stack *s, int nbr)
+int ft_get_index_in_sorted(t_stack *s, int nbr)
 {
     int i;
 
@@ -30,7 +30,7 @@ void ft_sort_five(t_stack *s)
    
     while(s->stack_a_len > 3)
     {
-        if(ft_get_index(s, s->stack_a[0]) == 0 || ft_get_index(s, s->stack_a[0]) == 1)
+        if(ft_get_index_in_sorted(s, s->stack_a[0]) == 0 || ft_get_index_in_sorted(s, s->stack_a[0]) == 1)
             ft_pb(s);
         else
             ft_ra(s);

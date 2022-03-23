@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:53:05 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/21 11:53:02 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/23 12:57:38 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,14 @@ t_chosen	ft_find_chosen_list(t_stack *s)
 		{
 			j.nbr_index = i;
 			j.len = ft_check_element_list(s, i);
+		}
+		else if (j.len == ft_check_element_list(s, i))
+		{
+			if (ft_get_index_in_sorted(s, s->stack_a[i]) < ft_get_index_in_sorted(s, s->stack_a[j.nbr_index]))
+			{
+				j.nbr_index = i;
+				j.len = ft_check_element_list(s, i);
+			}
 		}
 	}
 	ft_bring_element_list(s, &j);

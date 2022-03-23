@@ -1,5 +1,7 @@
 # !bin/bash
 
+# ARG=""; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc -l
+
 ARG="1 2 3 4 5"; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc -l
 ARG="1 2 3 5 4"; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc -l
 ARG="1 2 4 3 5"; ./push_swap $ARG | ./checker_Mac $ARG && ./push_swap $ARG | wc -l

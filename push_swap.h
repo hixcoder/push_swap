@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/22 13:15:02 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/23 15:27:06 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 # define PUSH_SWAP_H
 # include "./ft_printf/ft_printf.h"
+
+# define RR_BOTH 12
 
 typedef struct s_stack
 {
@@ -52,6 +54,7 @@ typedef struct s_passed
 	char	*b_move_type;
 	int		b_moves;
 	int		a_moves;
+	int		check_min;
 }	t_passed;
 
 int     ft_stack_len(char **av);
@@ -59,7 +62,9 @@ void	ft_init_stack(t_stack	*stack);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	ft_sortalgo(t_stack *s);
-int ft_get_min(int *list, int list_len);
+int 	ft_get_min(int *list, int list_len);
+int 	ft_get_index_in_sorted(t_stack *s, int nbr);
+int		ft_get_index_in_a(t_stack *s, int nbr);
 
 
 void tester(t_stack *s, int i);
