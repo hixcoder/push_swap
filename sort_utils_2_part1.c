@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:54:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/22 12:58:49 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/23 10:43:03 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ int moves_in_a(int nbr, t_stack *s, t_passed *k)
 	}
 	if (i > mid_index)
 	{
-		k->a_move_type = "rra";
+		k->a_move_type = "rrr_both";
 		moves = s->stack_a_len - i;
 	}
 	else
 	{
-		k->a_move_type = "ra";
+		k->a_move_type = "rr_both";
 		moves = i;
 	}
 	k->your_place = i;
@@ -53,12 +53,12 @@ int moves_in_b(int i, t_stack *s, t_passed *k)
 	mid_index = s->stack_b_len / 2;
 	if (i > mid_index)
 	{
-		k->b_move_type = "rra";
+		k->b_move_type = "rrr_both";
 		moves = s->stack_b_len - i;
 	}
 	else
 	{
-		k->b_move_type = "ra";
+		k->b_move_type = "rr_both";
 		moves = i;
 	}
 	return (moves);

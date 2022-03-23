@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/22 14:28:23 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/23 10:52:41 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,14 @@ void tester(t_stack *s, int i)
 		else
 			ft_printf("\n\n=====> Your list is not sorted, Sorry!\n\n");
 	}
+	else if (i == 3)
+	{
+		for (int i = 0; i < s->stack_a_len; i++)
+			ft_printf("stack_a[%d] = %d\n", i, s->stack_a[i]);
+		ft_printf("\n");
+		for (int i = 0; i < s->stack_b_len; i++)
+			ft_printf("stack_b[%d] = %d\n", i, s->stack_b[i]);
+	}
 }
 
 // Insertion Sort algorithm
@@ -77,7 +85,7 @@ int main(int ac, char **av)
 			return (0);
 		// please debug this : ./push_swap 427 195 232 505 323 59 277 566 141 109
 		// the problem may be in ft_move_both func
-		tester(&s, 1);
+		// tester(&s, 1);
 
 		if (s.stack_a_len == 3)
 			ft_sort_three(&s);
@@ -86,7 +94,7 @@ int main(int ac, char **av)
 		else
 			ft_sort_general(&s);
 		
-		tester(&s, 2);
+		// tester(&s, 2);
 		// while (1);
 	}
 	else
