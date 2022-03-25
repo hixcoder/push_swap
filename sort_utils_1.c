@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:53:05 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/23 12:57:38 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/25 03:02:00 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int ft_check_element_list(t_stack *s, int i)
 	int	j;
 	int k;
 	int l;
-
 	len = 1;
 	j = i;
 	k = i;
@@ -84,6 +83,7 @@ t_chosen	ft_find_chosen_list(t_stack *s)
 {
 	int i;
 	t_chosen j;
+	// int	inst[s->stack_a_len];
 
 	i = -1;
 	j.len = 0;
@@ -103,6 +103,12 @@ t_chosen	ft_find_chosen_list(t_stack *s)
 			}
 		}
 	}
+	// ft_printf("j.nbr_index = %d\n",j.len);
+	// ft_printf("j.len = %d\n",j.len);
+	// for (int i = 0; i < s->stack_a_len; i++)
+	// {
+	// 	ft_printf("inst[%d] = %d\n",i, inst[i]);	
+	// }
 	ft_bring_element_list(s, &j);
 	return (j);
 }

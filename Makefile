@@ -6,7 +6,7 @@
 #    By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 09:07:06 by hboumahd          #+#    #+#              #
-#    Updated: 2022/03/21 09:55:06 by hboumahd         ###   ########.fr        #
+#    Updated: 2022/03/25 01:32:20 by hboumahd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ LIBS = ./ft_printf.a
 INCLUDES = push_swap.h ./ft_printf/ft_printf.h 
 
 # -g for the debugger
-FLAGS = -Wall -Wextra -Werror 
+FLAGS = -Wall -Wextra -Werror -g
 CC = cc 
 
 %.o : %.c ${INCLUDES}

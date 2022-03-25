@@ -1,35 +1,5 @@
-make --dry-run --always-make --keep-going --print-directory
+make --dry-run --keep-going --print-directory
 make: Entering directory `/Users/hboumahd/Desktop/push_swap'
-cc  -Wall -Wextra -Werror  -c push_swap.c -o push_swap.o
-cc  -Wall -Wextra -Werror  -c stack_init.c -o stack_init.o
-cc  -Wall -Wextra -Werror  -c push_swap_utils_1.c -o push_swap_utils_1.o
-cc  -Wall -Wextra -Werror  -c instructions_1.c -o instructions_1.o
-cc  -Wall -Wextra -Werror  -c instructions_2.c -o instructions_2.o
-cc  -Wall -Wextra -Werror  -c instructions_3.c -o instructions_3.o
-cc  -Wall -Wextra -Werror  -c sort_three.c -o sort_three.o
-cc  -Wall -Wextra -Werror  -c sort_five.c -o sort_five.o
-cc  -Wall -Wextra -Werror  -c sort_handred.c -o sort_handred.o
-cc  -Wall -Wextra -Werror  -c sort_general.c -o sort_general.o
-cc  -Wall -Wextra -Werror  -c sort_utils_1.c -o sort_utils_1.o
- 
-cc  -Wall -Wextra -Werror  -c sort_utils_2_part1.c -o sort_utils_2_part1.o
-cc  -Wall -Wextra -Werror  -c sort_utils_2_part2.c -o sort_utils_2_part2.o
-/Library/Developer/CommandLineTools/usr/bin/make -C ./ft_printf/
- 
-make[1]: Entering directory `/Users/hboumahd/Desktop/push_swap/ft_printf'
-cc  -Wall -Wextra -Werror -c ft_printf.c -o ft_printf.o
- 
-cc  -Wall -Wextra -Werror -c ft_putchar.c -o ft_putchar.o
-cc  -Wall -Wextra -Werror -c ft_putnbr_base.c -o ft_putnbr_base.o
-cc  -Wall -Wextra -Werror -c ft_putstr.c -o ft_putstr.o
-cc  -Wall -Wextra -Werror -c ft_putnbr_base2.c -o ft_putnbr_base2.o
-cc  -Wall -Wextra -Werror -c ft_putnbr.c -o ft_putnbr.o
- 
-ar rcs ft_printf.a ft_printf.o ft_putchar.o ft_putnbr_base.o ft_putstr.o ft_putnbr_base2.o ft_putnbr.o 
-mv ft_printf.a ..
-make[1]: Leaving directory `/Users/hboumahd/Desktop/push_swap/ft_printf'
-echo "make the ft_printf.a" 
-echo "make the push_swap program"
-cc  push_swap.o stack_init.o push_swap_utils_1.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o sort_handred.o sort_general.o sort_utils_1.o sort_utils_2_part1.o sort_utils_2_part2.o ./ft_printf.a  -o push_swap
+make: `push_swap' is up to date.
 make: Leaving directory `/Users/hboumahd/Desktop/push_swap'
  

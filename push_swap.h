@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/23 15:27:06 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/23 16:23:10 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ typedef struct s_passed
 	char	*b_move_type;
 	int		b_moves;
 	int		a_moves;
-	int		check_min;
 }	t_passed;
 
 int     ft_stack_len(char **av);

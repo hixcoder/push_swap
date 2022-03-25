@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:44:06 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/23 15:33:04 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/03/25 02:56:03 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ void	ft_move_both(t_stack *s, int len, char *move_type, t_passed *i)
 			i->your_place = 0;
 		if (i->go_to == s->stack_b_len)
 			i->go_to = 0;
+		// i->a_moves--;
+		// i->b_moves--;
 	}
 }
 
@@ -83,13 +85,19 @@ void	ft_push_it_to_a(t_stack *s, t_passed *i)
 {
 	int	shared_moves;
 
-	if (i->a_moves > i->b_moves)
+	shared_moves = 0;
+	if (i->a_move_type == i->b_move_type && i->a_moves > i->b_moves)
 		shared_moves = i->b_moves;
-	else
+	else if (i->a_move_type == i->b_move_type && i->a_moves <= i->b_moves)
 		shared_moves = i->a_moves;
+	// ft_printf("\nbefore:\ni->a_move_type = %s\ni->b_move_type = %s\n",i->a_move_type, i->b_move_type);
 	// ft_printf("i->b_moves = %d\ni->a_moves = %d\nshared_moves = %d\n\n",i->b_moves, i->a_moves, shared_moves);
-	if (i->a_move_type == i->b_move_type && shared_moves > 0)
+	if (shared_moves > 0)
+	{
 		ft_move_both(s, shared_moves, i->b_move_type, i);
+		shared_moves = 0;
+		// ft_printf("\nafter:\ni->b_moves = %d\ni->a_moves = %d\nshared_moves = %d\n\n",i->b_moves, i->a_moves, shared_moves);		
+	}
 	if (i->a_moves > 0)
 		ft_move_to_top_of_a(s, i->your_place, s->stack_a[i->your_place]);
 	if (i->b_moves > 0)
@@ -144,8 +152,15 @@ void	ft_from_b_to_a(t_stack *s)
 void    ft_sort_general(t_stack *s)
 {
 	t_chosen    chosen;
-
+	
+	// tester(s, 3);
 	chosen = ft_find_chosen_list(s);
+	// ft_printf("\n\n==>the_unchosen_to_b:\n");
+	// for (int i = 0; i < chosen.len; i++)
+	// {
+	// 	printf("chosen.list[%d] = %d\n",i, chosen.list[i]);	
+	// }
+	
 	ft_push_the_unchosen_to_b(s, chosen);
 	// ft_printf("\n\n==> After push_the_unchosen_to_b:\n");
 	// tester(s, 3);
