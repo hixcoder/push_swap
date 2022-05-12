@@ -6,16 +6,14 @@
 #    By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 09:07:06 by hboumahd          #+#    #+#              #
-#    Updated: 2022/05/12 12:18:55 by hboumahd         ###   ########.fr        #
+#    Updated: 2022/05/12 14:30:33 by hboumahd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRCS_PUSH_SWAP =	push_swap.c stack_init.c push_swap_utils_1.c instructions_0.c instructions_1.c instructions_2.c instructions_3.c\
-					sort_three.c sort_five.c sort_handred.c sort_general.c sort_utils_1.c sort_utils_2_part1.c\
-					sort_utils_2_part2.c
-					
+SRCS_PUSH_SWAP =	push_swap.c stack_init.c push_swap_utils.c instructions_0.c instructions_1.c instructions_2.c instructions_3.c\
+					sort_three.c sort_five.c sort_general.c sort_utils_0.c sort_utils_1.c sort_utils_2.c sort_utils_3.c				
 					
 OBJS_PUSH_SWAP = ${SRCS_PUSH_SWAP:.c=.o}
 

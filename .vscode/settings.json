@@ -1,6 +1,14 @@
 {
     "makefile.extensionOutputFolder": "./.vscode",
     "files.associations": {
-        "ft_printf.h": "c"
+        "ft_printf.h": "c",
+        "cwchar": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "utility": "cpp",
+        "__config": "cpp",
+        "__hash_table": "cpp",
+        "set": "cpp",
+        "tuple": "cpp"
     }
 }
