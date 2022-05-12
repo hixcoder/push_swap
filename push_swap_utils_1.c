@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/21 15:48:56 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/12 12:10:41 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void ft_sortalgo(t_stack *s)
 	s->stack_sorted = (int *) malloc(sizeof(int) * s->stack_a_len);
 	if (s->stack_sorted == NULL)
 	{
-		free(s->stack_a);
+		free(s->stack_sorted);
 		exit(1);
 	}
 	ft_memcpy(s->stack_sorted, s->stack_a, sizeof(int) * s->stack_a_len);

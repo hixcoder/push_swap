@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/25 02:47:34 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/12 11:53:04 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,12 +80,14 @@ int main(int ac, char **av)
 	if (ac > 1)
 	{
 		s.av = av;
+		s.stack_a_len = ac - 1;
+		s.stack_b_len = 0;
 		ft_init_stack(&s);
 		if (s.stack_a_len == 1)
 			return (0);
 		// please debug this : ./push_swap 427 195 232 505 323 59 277 566 141 109
 		// the problem may be in ft_move_both func
-		// tester(&s, 1);
+		// tester(&s, 1); 
 
 		if (s.stack_a_len == 3)
 			ft_sort_three(&s);

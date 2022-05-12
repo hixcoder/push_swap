@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:53:05 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/25 03:02:00 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:24:28 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 
 // i : is the index of the element that we will check it's list
 
-int ft_check_element_list(t_stack *s, int i)
+int	ft_check_element_list(t_stack *s, int i)
 {
 	int len;
 	int	j;
 	int k;
 	int l;
+	
 	len = 1;
 	j = i;
 	k = i;

@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:41 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/13 09:25:41 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/12 11:59:15 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,22 @@
  		->the nbr is not in the range of integers (long)
  		->the nbr is already exist (duplication).
 */
-void    ft_error()
+void    ft_exit(t_stack *s, int status)
 {
-    ft_printf("Error\n");
-    exit(1);
+	if (status == 0)
+	{
+		free(s->stack_a);
+   		exit(0);
+	}
+	else
+	{
+    	ft_printf("Error\n");
+		free(s->stack_a);
+    	exit(1);
+	}
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *str, t_stack *s)
 {
 	int	    i;
 	long	nbr;
@@ -44,22 +53,12 @@ int	ft_atoi(const char *str)
 		if (str[i] >= '0' && str[i] <= '9')
 			nbr = nbr * 10 + (str[i++] - '0');
 		else
-			ft_error();
+			ft_exit(s, 1);
 	}
 	nbr = nbr * sign;
     if (nbr < -2147483648 || nbr > 2147483647)
-        ft_error();
+        ft_exit(s, 1);
 	return ((int) nbr);
-}
-
-int	ft_stack_len(char **av)
-{
-	int i;
-
-	i = 1;
-	while (av[i])
-		i++;
-	return (i);
 }
 
 void	ft_check_dup(t_stack *s)
@@ -74,7 +73,7 @@ void	ft_check_dup(t_stack *s)
 		while (++j < s->stack_a_len)
 		{
 			if (s->stack_a[i] == s->stack_a[j])
-				ft_error();
+				ft_exit(s, 1);
 		}
 	}
 }
@@ -85,24 +84,19 @@ void	ft_is_sorted(t_stack *s)
 
 	cmp = ft_memcmp(s->stack_a, s->stack_sorted, s->stack_a_len * sizeof(int));
 	if (cmp == 0)
-		exit(0);
+		ft_exit(s, 0);
 }
 
 void	ft_init_stack(t_stack	*s)
 {
 	int	i;
 	
-	s->stack_a_len = ft_stack_len(s->av) - 1;
-	s->stack_b_len = 0;
 	s->stack_a = (int *) malloc(sizeof(int) * s->stack_a_len);
 	if (s->stack_a == NULL)
-	{
-		free(s->stack_a);
-		exit(1);
-	}
+		ft_exit(s, 1);
 	i = -1;
 	while (++i < s->stack_a_len)
-		s->stack_a[i] = ft_atoi(s->av[i + 1]);
+		s->stack_a[i] = ft_atoi(s->av[i + 1], s);
 	ft_check_dup(s);
 	ft_sortalgo(s);
 	ft_is_sorted(s);

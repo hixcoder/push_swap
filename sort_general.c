@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:44:06 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/03/25 02:56:03 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/10 18:31:38 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,29 +105,6 @@ void	ft_push_it_to_a(t_stack *s, t_passed *i)
 	ft_pa(s);
 }
 
-void	ft_remove_min_from_b(t_stack *s)
-{
-	int	i;
-	int	min_index_in_a;
-
-	i = -1;
-	while (++i < s->stack_b_len)
-	{
-		// ft_printf("s->stack_b[i] = %d vs s->stack_sorted[0] = %d\n",s->stack_b[i],s->stack_sorted[0]);
-		if (s->stack_b[i] == s->stack_sorted[0])
-		{
-			// ft_printf("s->stack_b[i] = %d vs s->stack_sorted[0] = %d\n",s->stack_b[i],s->stack_sorted[0]);
-			min_index_in_a = ft_get_index_in_a(s, ft_get_min(s->stack_a, s->stack_a_len));
-			// ft_printf("ft_get_min(s->stack_a, s->stack_a_len) = %d\n\n", ft_get_min(s->stack_a, s->stack_a_len));
-			// ft_printf("min_index_in_a = %d\n\n", min_index_in_a);
-			
-			ft_move_to_top_of_a(s, min_index_in_a, s->stack_a[min_index_in_a]);
-			ft_move_to_top_of_b(s, i, s->stack_sorted[0]);
-			ft_pa(s);
-			break ;
-		}			
-	}
-}
 /*
 * i.go_to: is the index of the number that we will push to stack a.
 * i.your_place: is the index of the number that we must move it to top of a before 
