@@ -6,16 +6,14 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # PARTICULAR PURPOSE.
 
 # This program built for i386-apple-darwin11.3.0
- 
 
-# Make data base, printed on Fri May 13 12:05:03 2022
+# Make data base, printed on Fri May 13 15:37:30 2022
 
 # Variables
 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
- 
 ?F = $(notdir $?)
 # environment
 VSCODE_LOG_NATIVE = false
@@ -40,15 +38,15 @@ MAKEFILE_LIST :=  Makefile
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-0f8e5b42-4cfd-476e-aac7-9cbe8fcb0f9b.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-86fef506-58ec-4e7b-9eb0-81bc81d1f994.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.yeVKJ9hxYA/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.6T73eBTT6Y/Render
 # makefile (from `Makefile', line 14)
 CHECKER = checker
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/hboumahd/goinfre/devtools/Android/sdk/tools/bin:/Users/hboumahd/goinfre/devtools/Android/sdk/emulator:/Users/hboumahd/goinfre/devtools/flutter/bin:/Users/hboumahd/goinfre/devtools/gradle/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/hboumahd/goinfre/devtools/jdk/Contents/Home/bin
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/hboumahd/goinfre/devtools/Android/sdk/tools/bin:/Users/hboumahd/goinfre/devtools/Android/sdk/emulator:/Users/hboumahd/goinfre/devtools/flutter/bin:/Users/hboumahd/goinfre/devtools/gradle/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/hboumahd/goinfre/devtools/jdk/Contents/Home/bin
 # makefile (from `Makefile', line 19)
 OBJS_PUSH_SWAP = ${SRCS_PUSH_SWAP:.c=.o}
 # environment
@@ -58,7 +56,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.vyepMJCzQF/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.oVCw8isqE4/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
@@ -74,7 +72,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /Users/hboumahd
 # default
-MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
+MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
 # environment
 VSCODE_CODE_CACHE_PATH = /Users/hboumahd/Library/Application Support/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
 # environment
@@ -114,7 +112,7 @@ NAME = push_swap
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
+MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
 # default
 .VARIABLES := 
 # environment
@@ -130,15 +128,13 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000005.Electron
+XPC_SERVICE_NAME = com.microsoft.VSCode.1276
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0x18D72:0:0
-# environment
-COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -153,8 +149,6 @@ LC_ALL = C
 OBJS_FT_PRINTF = ${SRCS_FT_PRINTF:.c=.o}
 # makefile (from `Makefile', line 27)
 LIBS = ./ft_printf.a 
-# environment
-SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -176,9 +170,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 51495
+VSCODE_PID = 81668
 # variable set hash-table stats:
-# Load=82/1024=8%, Rehash=0, Collisions=4/130=3%
+# Load=80/1024=8%, Rehash=0, Collisions=2/119=2%
 
 # Pattern-specific Variable Values
 
@@ -205,11 +199,10 @@ VSCODE_PID = 51495
 stack_init.o: stack_init.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `stack_init'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:06
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
- 
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 #  commands to execute (from `Makefile', line 35):
 	$(CC) ${FLAGS} -c $< -o $@
@@ -218,7 +211,7 @@ stack_init.o: stack_init.c push_swap.h ft_printf/ft_printf.h
 # Not a target:
 sort_utils_3.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-13 10:47:42
+#  Last modified 2022-05-13 12:57:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -227,7 +220,7 @@ sort_utils_3.c:
 sort_utils_0.o: sort_utils_0.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_utils_0'
-#  Last modified 2022-05-13 12:02:01
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -239,7 +232,7 @@ sort_utils_0.o: sort_utils_0.c push_swap.h ft_printf/ft_printf.h
 # Not a target:
 push_swap.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-13 11:55:15
+#  Last modified 2022-05-13 12:35:47
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -254,60 +247,34 @@ sort_general.c:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-b: push_swap checker.o
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
-#  commands to execute (from `Makefile', line 52):
-	@echo "make the checker program"
-	@$(CC) ${FLAGS} $(OBJS_PUSH_SWAP) $(LIBS) checker.c -o $(CHECKER)
-	
-
-all: push_swap push_swap.o checker.o
-#  Command-line target.
-#  Implicit rule search has not been done.
-#  Implicit/static pattern stem: `'
-#  File does not exist.
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := all
-# automatic
-# % := 
-# automatic
-# * := 
-# automatic
-# + := push_swap push_swap.o checker.o
-# automatic
-# | := 
-# automatic
-# < := push_swap
-# automatic
-# ^ := push_swap push_swap.o checker.o
-# automatic
-# ? := push_swap push_swap.o checker.o
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=3/22=14%
-#  commands to execute (from `Makefile', line 42):
-	@echo "make the push_swap program"
-	@$(CC) ${FLAGS} $(OBJS_PUSH_SWAP) $(LIBS) push_swap.c -o $(NAME)
-	@echo "make the checker program"
-	@$(CC) ${FLAGS} $(OBJS_PUSH_SWAP) $(LIBS) checker.c -o $(CHECKER)
-	
-
-m: push_swap push_swap.o
+b: push_swap stack_init.o push_swap_utils.o instructions_0.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o sort_general.o sort_utils_0.o sort_utils_1.o sort_utils_2.o sort_utils_3.o ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_putnbr_base.c ft_printf/ft_putstr.c ft_printf/ft_putnbr_base2.c ft_printf/ft_putnbr.c checker.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 #  commands to execute (from `Makefile', line 48):
-	@echo "make the push_swap program"
-	@$(CC) ${FLAGS} $(OBJS_PUSH_SWAP) $(LIBS) push_swap.c -o $(NAME)
+	@echo "make the checker program"
+	@$(CC) ${FLAGS} $(OBJS_PUSH_SWAP) $(LIBS) checker.c -o $(CHECKER)
 	
+
+all: push_swap
+#  Command-line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+ 
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+
+m: push_swap
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 sort_general.o: sort_general.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_general'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -319,7 +286,7 @@ sort_general.o: sort_general.c push_swap.h ft_printf/ft_printf.h
 sort_utils_1.o: sort_utils_1.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_utils_1'
-#  Last modified 2022-05-13 12:02:01
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -331,7 +298,7 @@ sort_utils_1.o: sort_utils_1.c push_swap.h ft_printf/ft_printf.h
 # Not a target:
 instructions_3.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-05 12:08:12
+#  Last modified 2022-05-13 12:54:12
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -340,7 +307,7 @@ instructions_3.c:
 instructions_0.o: instructions_0.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `instructions_0'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -352,7 +319,7 @@ instructions_0.o: instructions_0.c push_swap.h ft_printf/ft_printf.h
 # Not a target:
 push_swap.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 16:00:44
+#  Last modified 2022-05-13 12:49:04
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -376,7 +343,7 @@ ft_printf/ft_putnbr_base.c:
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-13 12:01:44
+#  Last modified 2022-05-13 15:35:57
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -385,7 +352,7 @@ Makefile:
 instructions_1.o: instructions_1.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `instructions_1'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -406,7 +373,7 @@ ft_printf/ft_putnbr.c:
 sort_utils_2.o: sort_utils_2.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_utils_2'
-#  Last modified 2022-05-13 12:02:01
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -418,7 +385,7 @@ sort_utils_2.o: sort_utils_2.c push_swap.h ft_printf/ft_printf.h
 push_swap_utils.o: push_swap_utils.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push_swap_utils'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -430,7 +397,7 @@ push_swap_utils.o: push_swap_utils.c push_swap.h ft_printf/ft_printf.h
 # Not a target:
 stack_init.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 11:59:15
+#  Last modified 2022-05-13 12:34:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -448,7 +415,7 @@ sort_utils_0.c:
 instructions_2.o: instructions_2.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `instructions_2'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -461,14 +428,14 @@ fclean: clean
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 60):
+#  commands to execute (from `Makefile', line 55):
 	@rm -f $(NAME) $(CHECKER)
 	
 
 # Not a target:
 sort_utils_1.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 15:31:23
+#  Last modified 2022-05-13 12:55:41
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -477,7 +444,7 @@ sort_utils_1.c:
 sort_five.o: sort_five.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_five'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -489,8 +456,7 @@ sort_five.o: sort_five.c push_swap.h ft_printf/ft_printf.h
 # Not a target:
 instructions_0.c:
 #  Implicit rule search has been done.
- 
-#  Last modified 2022-05-12 12:18:57
+#  Last modified 2022-05-13 12:48:11
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -523,23 +489,17 @@ ft_printf/ft_putnbr_base2.c:
 # Not a target:
 instructions_1.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 12:33:03
+#  Last modified 2022-05-13 12:50:31
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-checker.o: checker.c push_swap.h ft_printf/ft_printf.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `checker'
-#  Last modified 2022-05-13 12:02:01
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 35):
-	$(CC) ${FLAGS} -c $< -o $@
-	
+# Not a target:
+checker.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 ft_printf/ft_putstr.c:
@@ -559,7 +519,7 @@ clean:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-#  commands to execute (from `Makefile', line 57):
+#  commands to execute (from `Makefile', line 52):
 	@rm -f $(LIBS) $(OBJS_FT_PRINTF) $(OBJS_PUSH_SWAP) checker.o push_swap.o
 	
 
@@ -584,8 +544,9 @@ push_swap_utils.c:
 sort_utils_3.o: sort_utils_3.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_utils_3'
-#  Last modified 2022-05-13 12:02:01
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
+ 
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
@@ -596,7 +557,7 @@ sort_utils_3.o: sort_utils_3.c push_swap.h ft_printf/ft_printf.h
 push_swap.o: push_swap.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push_swap'
-#  Last modified 2022-05-13 12:02:01
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -605,9 +566,9 @@ push_swap.o: push_swap.c push_swap.h ft_printf/ft_printf.h
 	$(CC) ${FLAGS} -c $< -o $@
 	
 
-push_swap: stack_init.o push_swap_utils.o instructions_0.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o sort_general.o sort_utils_0.o sort_utils_1.o sort_utils_2.o sort_utils_3.o ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_putnbr_base.c ft_printf/ft_putstr.c ft_printf/ft_putnbr_base2.c ft_printf/ft_putnbr.c
+push_swap: stack_init.o push_swap_utils.o instructions_0.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o sort_general.o sort_utils_0.o sort_utils_1.o sort_utils_2.o sort_utils_3.o ft_printf/ft_printf.c ft_printf/ft_putchar.c ft_printf/ft_putnbr_base.c ft_printf/ft_putstr.c ft_printf/ft_putnbr_base2.c ft_printf/ft_putnbr.c push_swap.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-13 12:02:01
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -615,6 +576,8 @@ push_swap: stack_init.o push_swap_utils.o instructions_0.o instructions_1.o inst
 #  commands to execute (from `Makefile', line 38):
 	@$(MAKE) -C $(FT_PRINTF_FOLDER)
 	@echo "make the ft_printf.a"
+	@echo "make the push_swap program"
+	@$(CC) ${FLAGS} $(OBJS_PUSH_SWAP) $(LIBS) push_swap.c -o $(NAME)
 	
 
 # Not a target:
@@ -638,7 +601,7 @@ ft_printf/ft_putchar.c:
 # Not a target:
 instructions_2.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-05 12:07:59
+#  Last modified 2022-05-13 12:52:39
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -647,7 +610,7 @@ instructions_2.c:
 instructions_3.o: instructions_3.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `instructions_3'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -659,7 +622,7 @@ instructions_3.o: instructions_3.c push_swap.h ft_printf/ft_printf.h
 # Not a target:
 sort_five.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-12 16:00:44
+#  Last modified 2022-05-13 12:57:02
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -668,7 +631,7 @@ sort_five.c:
 # Not a target:
 sort_three.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-03-14 15:37:33
+#  Last modified 2022-05-13 12:57:15
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -677,7 +640,7 @@ sort_three.c:
 sort_three.o: sort_three.c push_swap.h ft_printf/ft_printf.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_three'
-#  Last modified 2022-05-13 12:02:00
+#  Last modified 2022-05-13 15:37:07
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -686,17 +649,8 @@ sort_three.o: sort_three.c push_swap.h ft_printf/ft_printf.h
 	$(CC) ${FLAGS} -c $< -o $@
 	
 
-# Not a target:
-checker.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-13 11:14:56
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 # files hash-table stats:
-# Load=48/1024=5%, Rehash=0, Collisions=8/196=4%
+# Load=47/1024=5%, Rehash=0, Collisions=9/204=4%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -708,6 +662,6 @@ checker.c:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri May 13 12:05:03 2022
+# Finished Make data base on Fri May 13 15:37:30 2022
 
  

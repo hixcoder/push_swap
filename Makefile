@@ -6,7 +6,7 @@
 #    By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/02 09:07:06 by hboumahd          #+#    #+#              #
-#    Updated: 2022/05/13 13:02:59 by hboumahd         ###   ########.fr        #
+#    Updated: 2022/05/13 15:39:48 by hboumahd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ CC = cc
 %.o : %.c ${INCLUDES}
 	$(CC) ${FLAGS} -c $< -o $@
 	
-$(NAME) : $(OBJS_PUSH_SWAP) $(SRCS_FT_PRINTF) push_swap.o checker.o
+$(NAME) : $(OBJS_PUSH_SWAP) $(SRCS_FT_PRINTF) push_swap.o
 	@$(MAKE) -C $(FT_PRINTF_FOLDER)
 	@echo "make the ft_printf.a"
 	@echo "make the push_swap program"
@@ -44,10 +44,11 @@ all : $(NAME)
 
 m: $(NAME)
 
-b: $(NAME)
+b: $(OBJS_PUSH_SWAP) $(SRCS_FT_PRINTF) checker.o
+	@$(MAKE) -C $(FT_PRINTF_FOLDER)
+	@echo "make the ft_printf.a"
 	@echo "make the checker program"
 	@$(CC) ${FLAGS} $(OBJS_PUSH_SWAP) $(LIBS) checker.c -o $(CHECKER)
-
 
 clean :
 	@rm -f $(LIBS) $(OBJS_FT_PRINTF) $(OBJS_PUSH_SWAP) checker.o push_swap.o
