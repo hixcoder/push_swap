@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/12 16:00:44 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/13 12:49:04 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,17 @@ void	ft_sort_five(t_stack *s);
 void	ft_sort_general(t_stack *s);
 
 // those exist in the instructions_x.c files.
-void	ft_sa(t_stack *s);
-void	ft_sb(t_stack *s);
-void	ft_ss(t_stack *s);
-void	ft_pb(t_stack *s);
-void	ft_pa(t_stack *s);
-void	ft_ra(t_stack *s);
-void	ft_rb(t_stack *s);
-void	ft_rr(t_stack *s);
-void	ft_rra(t_stack *s);
-void	ft_rrb(t_stack *s);
-void	ft_rrr(t_stack *s);
+void 	ft_sa(t_stack *s, int w);
+void 	ft_sb(t_stack *s, int w);
+void 	ft_ss(t_stack *s, int w);
+void	ft_pb(t_stack *s, int w);
+void	ft_pa(t_stack *s, int w);
+void	ft_ra(t_stack *s, int w);
+void	ft_rb(t_stack *s, int w);
+void	ft_rr(t_stack *s, int w);
+void	ft_rra(t_stack *s, int w);
+void	ft_rrb(t_stack *s, int w);
+void	ft_rrr(t_stack *s, int w);
 
 // functions used in the push_swap_utils.c file
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -85,8 +85,8 @@ int		ft_get_min(int *list, int list_len);
 void	ft_exit(t_stack *s, int status);
 int		ft_atoi(const char *str, t_stack *s);
 void	ft_check_dup(t_stack *s);
-void	ft_is_sorted(t_stack *s);
-void	ft_init_stack(t_stack	*stack);
+void	ft_is_sorted(t_stack *s, int action);
+void	ft_init_stack(t_stack *s, int action);
 
 // functions used in the sort_utils_0.c file
 int		ft_gIn(t_stack *s, int nbr);

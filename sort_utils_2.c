@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:54:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/12 17:08:43 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/13 10:43:41 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 int	ft_nexnbr_index_a(int nbr, t_stack *s, int *mid_index)
 {
-
 	int check_min;
 	int i;
 	

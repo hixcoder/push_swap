@@ -1,16 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/13 12:35:47 by hboumahd         ###   ########.fr       */
+/*   Created: 2022/05/13 11:07:30 by hboumahd          #+#    #+#             */
+/*   Updated: 2022/05/13 12:35:50 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void ft_checker(t_stack *s)
+{
+	if (ft_memcmp(s->stack_sorted, s->stack_a, s->sorted_len * sizeof(int)) == 0)
+		ft_printf("OK\n");
+	else
+		ft_printf("KO\n");
+	
+}
 
 int main(int ac, char **av)
 {
@@ -21,7 +30,7 @@ int main(int ac, char **av)
 		s.av = av;
 		s.stack_a_len = ac - 1;
 		s.stack_b_len = 0;
-		ft_init_stack(&s, 0);
+		ft_init_stack(&s, 1);
 		if (s.stack_a_len == 1)
 			return (0);
 		if (s.stack_a_len == 3)
@@ -31,7 +40,7 @@ int main(int ac, char **av)
 		else
 			ft_sort_general(&s);
 		
-		// tester(&s, 2);
+		ft_checker(&s);
 	}
 	else
 		return (0);

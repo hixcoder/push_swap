@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:53:05 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/12 15:31:23 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/13 12:55:41 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void	ft_push_the_unchosen_to_b(t_stack *s, t_chosn chosen)
 	while (s->stack_a_len != chosen.len)
 	{
 		if (ft_is_in_chosen(chosen, s->stack_a[i]) == 0)
-			ft_pb(s);
+			ft_pb(s, 1);
 		else
-			ft_ra(s);
+			ft_ra(s, 1);
 	}
 }

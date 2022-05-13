@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:41 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/12 11:59:15 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/13 12:34:39 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,16 +78,21 @@ void	ft_check_dup(t_stack *s)
 	}
 }
 
-void	ft_is_sorted(t_stack *s)
+void	ft_is_sorted(t_stack *s, int action)
 {
 	int cmp;
 
 	cmp = ft_memcmp(s->stack_a, s->stack_sorted, s->stack_a_len * sizeof(int));
-	if (cmp == 0)
+	if (cmp == 0 && action == 0)
 		ft_exit(s, 0);
+	else if (cmp == 0 && action == 1)
+	{
+		ft_printf("OK");
+		ft_exit(s, 0);
+	}
 }
 
-void	ft_init_stack(t_stack	*s)
+void	ft_init_stack(t_stack	*s, int action)
 {
 	int	i;
 	
@@ -99,5 +104,5 @@ void	ft_init_stack(t_stack	*s)
 		s->stack_a[i] = ft_atoi(s->av[i + 1], s);
 	ft_check_dup(s);
 	ft_sortalgo(s);
-	ft_is_sorted(s);
+	ft_is_sorted(s, action);
 }
