@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/13 12:35:47 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/13 19:01:18 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ int main(int ac, char **av)
 		s.av = av;
 		s.stack_a_len = ac - 1;
 		s.stack_b_len = 0;
-		ft_init_stack(&s, 0);
-		if (s.stack_a_len == 1)
-			return (0);
+		ft_init_stack(&s);
 		if (s.stack_a_len == 3)
 			ft_sort_three(&s);
 		else if (s.stack_a_len == 5)

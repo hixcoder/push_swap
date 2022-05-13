@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:41 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/13 12:34:39 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/13 19:00:14 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void    ft_exit(t_stack *s, int status)
 	}
 	else
 	{
-    	ft_printf("Error\n");
+		write(2, "Error\n", 6);
 		free(s->stack_a);
     	exit(1);
 	}
@@ -45,6 +45,8 @@ int	ft_atoi(const char *str, t_stack *s)
 	sign = 1;
 	if (str[i] == '-')
 	{
+		if (str[i + 1] == '\0')
+			ft_exit(s, 1);
 		sign = -1;
 		i++;
 	}
@@ -78,21 +80,16 @@ void	ft_check_dup(t_stack *s)
 	}
 }
 
-void	ft_is_sorted(t_stack *s, int action)
+void	ft_is_sorted(t_stack *s)
 {
 	int cmp;
 
 	cmp = ft_memcmp(s->stack_a, s->stack_sorted, s->stack_a_len * sizeof(int));
-	if (cmp == 0 && action == 0)
+	if (cmp == 0)
 		ft_exit(s, 0);
-	else if (cmp == 0 && action == 1)
-	{
-		ft_printf("OK");
-		ft_exit(s, 0);
-	}
 }
 
-void	ft_init_stack(t_stack	*s, int action)
+void	ft_init_stack(t_stack	*s)
 {
 	int	i;
 	
@@ -104,5 +101,5 @@ void	ft_init_stack(t_stack	*s, int action)
 		s->stack_a[i] = ft_atoi(s->av[i + 1], s);
 	ft_check_dup(s);
 	ft_sortalgo(s);
-	ft_is_sorted(s, action);
+	ft_is_sorted(s);
 }
