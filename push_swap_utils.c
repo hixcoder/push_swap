@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
-
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
@@ -65,11 +63,11 @@ void	ft_swap(int *a, int *b)
 }
 
 // implement the selection sort algorithm
-void ft_sortalgo(t_stack *s)
+void	ft_sortalgo(t_stack *s)
 {
-	int i;
+	int	i;
 	int	j;
-	
+
 	s->sorted_len = s->stack_a_len;
 	s->stack_sorted = (int *) malloc(sizeof(int) * s->stack_a_len);
 	if (s->stack_sorted == NULL)
@@ -79,7 +77,7 @@ void ft_sortalgo(t_stack *s)
 	}
 	ft_memcpy(s->stack_sorted, s->stack_a, sizeof(int) * s->stack_a_len);
 	i = -1;
-	while(++i < s->stack_a_len)
+	while (++i < s->stack_a_len)
 	{
 		j = i + 1;
 		while (j < s->stack_a_len)
@@ -95,11 +93,11 @@ void ft_sortalgo(t_stack *s)
 }
 
 // this func return the min in a list of int.
-int ft_get_min(int *list, int list_len)
+int	ft_get_min(int *list, int list_len)
 {
-	int i;
-	int j;
-	
+	int	i;
+	int	j;
+
 	j = list[0];
 	i = 0;
 	while (++i < list_len)

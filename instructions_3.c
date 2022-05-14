@@ -6,10 +6,9 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 11:41:39 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/13 12:54:12 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/14 12:13:41 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -17,10 +16,10 @@
 	ft_rra (reverse rotate a): Shift down all elements of stack a by 1.
 	The last element becomes the first one.
 */
-void    ft_rra(t_stack *s, int w)
+void	ft_rra(t_stack *s, int w)
 {
-	int len;
-	int temp;
+	int	len;
+	int	temp;
 
 	if (s->stack_a_len > 1)
 	{
@@ -40,10 +39,10 @@ void    ft_rra(t_stack *s, int w)
 	ft_rrb (reverse rotate b): Shift down all elements of stack b by 1.
 	The last element becomes the first one.
 */
-void    ft_rrb(t_stack *s, int w)
+void	ft_rrb(t_stack *s, int w)
 {
-	int len;
-	int temp;
+	int	len;
+	int	temp;
 
 	if (s->stack_b_len > 1)
 	{
@@ -62,10 +61,10 @@ void    ft_rrb(t_stack *s, int w)
 /*
 	ft_rrr : ft_rra and ft_rrb at the same time.
 */
-void    ft_rrr(t_stack *s, int w)
+void	ft_rrr(t_stack *s, int w)
 {
-	int len;
-	int temp;
+	int	len;
+	int	temp;
 
 	if ((s->stack_a_len > 1 || s->stack_b_len > 1) && w == 1)
 		ft_printf("rrr\n");

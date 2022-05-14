@@ -8,10 +8,11 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Fri May 13 16:10:48 2022
+# Make data base, printed on Sat May 14 11:19:02 2022
 
 # Variables
 
+ 
 # automatic
 <D = $(patsubst %/,%,$(dir $<))
 # automatic
@@ -43,17 +44,17 @@ OTHER_OBJ = ${OTHER_SRCS:.c=.o}
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-86fef506-58ec-4e7b-9eb0-81bc81d1f994.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-cee6475d-b006-479d-a7a6-d2ac238b9196.sock
 # environment
 VSCODE_CWD = /
 # makefile (from `Makefile', line 27)
 SRCS_GET_NEXT_LINE = $(addprefix $(GET_NEXT_LINE_FOLDER), $(GET_NEXT_LINE_FILES))
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.6T73eBTT6Y/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.NjMJRKvNWi/Render
 # makefile (from `Makefile', line 14)
 CHECKER = checker
 # environment
-PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Users/hboumahd/goinfre/devtools/Android/sdk/tools/bin:/Users/hboumahd/goinfre/devtools/Android/sdk/emulator:/Users/hboumahd/goinfre/devtools/flutter/bin:/Users/hboumahd/goinfre/devtools/gradle/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/hboumahd/goinfre/devtools/jdk/Contents/Home/bin
+PATH = /usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/hboumahd/goinfre/devtools/Android/sdk/tools/bin:/Users/hboumahd/goinfre/devtools/Android/sdk/emulator:/Users/hboumahd/goinfre/devtools/flutter/bin:/Users/hboumahd/goinfre/devtools/gradle/bin:/Applications/Visual Studio Code.app/Contents/Resources/app/bin:/Users/hboumahd/goinfre/devtools/jdk/Contents/Home/bin
 # makefile (from `Makefile', line 18)
 OBJS_PUSH_SWAP = ${SRCS_PUSH_SWAP:.c=.o}
 # environment
@@ -63,7 +64,7 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.oVCw8isqE4/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.KxV1LbuGq6/Listeners
 # automatic
 %F = $(notdir $%)
 # makefile (from `Makefile', line 25)
@@ -81,7 +82,7 @@ VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
 # environment
 HOME = /Users/hboumahd
 # default
-MAKEFILEPATH = $(shell /usr/bin/xcode-select -print-path 2>/dev/null || echo /Developer)/Makefiles
+MAKEFILEPATH := /Applications/Xcode.app/Contents/Developer/Makefiles
 # environment
 VSCODE_CODE_CACHE_PATH = /Users/hboumahd/Library/Application Support/Code/CachedData/57fd6d0195bb9b9d1b49f6da5db789060795de47
 # environment
@@ -107,7 +108,6 @@ SHLVL = 1
 # makefile (from `Makefile', line 36)
 CC = cc 
 # environment
- 
 DEV_TOOLS = /Users/hboumahd/goinfre/devtools
 # environment
 JAVA_HOME = /Users/hboumahd/goinfre/devtools/jdk/Contents/Home
@@ -122,7 +122,7 @@ NAME = push_swap
 # automatic
 %D = $(patsubst %/,%,$(dir $%))
 # default
-MAKE_COMMAND := /Library/Developer/CommandLineTools/usr/bin/make
+MAKE_COMMAND := /Applications/Xcode.app/Contents/Developer/usr/bin/make
 # default
 .VARIABLES := 
 # environment
@@ -140,13 +140,15 @@ MFLAGS = -Rrqp
 # makefile (from `Makefile', line 26)
 GET_NEXT_LINE_FILES = get_next_line.c get_next_line_utils.c
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.1276
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
 +F = $(notdir $+)
 # environment
 __CF_USER_TEXT_ENCODING = 0x18D72:0:0
+# environment
+COMMAND_MODE = unix2003
 # default
 MAKEFILES := 
 # automatic
@@ -159,6 +161,8 @@ ANDROID_SDK_ROOT = /Users/hboumahd/goinfre/devtools/Android/sdk
 LC_ALL = C
 # makefile (from `Makefile', line 32)
 LIBS = ft_printf.a get_next_line.a
+# environment
+SECURITYSESSIONID = 186a8
 # automatic
 ^F = $(notdir $^)
 # environment
@@ -180,9 +184,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 81668
+VSCODE_PID = 52658
 # variable set hash-table stats:
-# Load=84/1024=8%, Rehash=0, Collisions=3/136=2%
+# Load=86/1024=8%, Rehash=0, Collisions=3/138=2%
 
 # Pattern-specific Variable Values
 
@@ -260,6 +264,7 @@ b: stack_init.o push_swap_utils.o instructions_0.o instructions_1.o instructions
 	@echo "make the ft_printf.a"
 	@echo "make the get_next_line.a"
 	@echo "make the checker program"
+ 
 	@$(CC) ${FLAGS} $(OBJS_PUSH_SWAP) $(LIBS) checker.c -o $(CHECKER)
 	
 
@@ -298,7 +303,7 @@ instructions_0.o:
 # Not a target:
 push_swap.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-13 15:59:44
+#  Last modified 2022-05-13 19:00:46
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -364,7 +369,7 @@ push_swap_utils.o:
 # Not a target:
 stack_init.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-13 12:34:39
+#  Last modified 2022-05-13 19:00:14
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -397,7 +402,6 @@ sort_five.o:
 #  File has not been updated.
 
 # Not a target:
- 
 get_next_line/get_next_line.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -502,6 +506,6 @@ ft_printf/ft_putnbr.o:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Fri May 13 16:10:48 2022
+# Finished Make data base on Sat May 14 11:19:02 2022
 
  

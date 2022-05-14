@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/03 22:47:29 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/13 12:50:31 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/14 13:05:33 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,18 @@ void	ft_free(t_stack *s)
 }
 
 /*
-	ft_pb (push to b): Take the first element at the top of a and put it at the top of b.
+	ft_pb (push to b): Take the first element at the top of a 
+					   and put it at the top of b.
 	Do nothing if a is empty.
 */
-void ft_pb(t_stack *s, int w)
+void	ft_pb(t_stack *s, int w)
 {
-	int	stack_b_temp[s->stack_b_len];
-	int	stack_a_temp[s->stack_a_len];
-	
+	int	b_temp[800000];
+	int	stack_a_temp[800000];
+
 	if (s->stack_a != NULL)
 	{
-		ft_memcpy(stack_b_temp, s->stack_b, sizeof(int) * s->stack_b_len);
+		ft_memcpy(b_temp, s->stack_b, sizeof(int) * s->stack_b_len);
 		ft_memcpy(stack_a_temp, s->stack_a, sizeof(int) * s->stack_a_len);
 		free(s->stack_a);
 		free(s->stack_b);
@@ -41,7 +42,7 @@ void ft_pb(t_stack *s, int w)
 		if (s->stack_a == NULL || s->stack_b == NULL)
 			ft_free(s);
 		s->stack_b[0] = stack_a_temp[0];
-		ft_memcpy(&s->stack_b[1], stack_b_temp, sizeof(int) * (s->stack_b_len - 1));
+		ft_memcpy(&s->stack_b[1], b_temp, sizeof(int) * (s->stack_b_len - 1));
 		ft_memcpy(s->stack_a, &stack_a_temp[1], sizeof(int) * s->stack_a_len);
 		if (w == 1)
 			ft_printf("pb\n");
@@ -51,18 +52,19 @@ void ft_pb(t_stack *s, int w)
 }
 
 /*
-	ft_pa (push to a): Take the first element at the top of b and put it at the top of a.
+	ft_pa (push to a): Take the first element at the top of b 
+						and put it at the top of a.
 	Do nothing if b is empty.
 */
-void ft_pa(t_stack *s, int w)
+void	ft_pa(t_stack *s, int w)
 {
-	int	stack_b_temp[s->stack_b_len];
-	int	stack_a_temp[s->stack_a_len];
-	
+	int	stack_b_temp[800000];
+	int	a_temp[800000];
+
 	if (s->stack_b != NULL)
 	{
 		ft_memcpy(stack_b_temp, s->stack_b, sizeof(int) * s->stack_b_len);
-		ft_memcpy(stack_a_temp, s->stack_a, sizeof(int) * s->stack_a_len);
+		ft_memcpy(a_temp, s->stack_a, sizeof(int) * s->stack_a_len);
 		free(s->stack_a);
 		free(s->stack_b);
 		s->stack_b_len--;
@@ -72,7 +74,7 @@ void ft_pa(t_stack *s, int w)
 		if (s->stack_a == NULL || s->stack_b == NULL)
 			ft_free(s);
 		s->stack_a[0] = stack_b_temp[0];
-		ft_memcpy(&s->stack_a[1], stack_a_temp, sizeof(int) * (s->stack_a_len - 1));
+		ft_memcpy(&s->stack_a[1], a_temp, sizeof(int) * (s->stack_a_len - 1));
 		ft_memcpy(s->stack_b, &stack_b_temp[1], sizeof(int) * s->stack_b_len);
 		if (w == 1)
 			ft_printf("pa\n");

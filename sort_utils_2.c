@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:54:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/13 10:43:41 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/14 12:52:24 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_nexnbr_index_a(int nbr, t_stack *s, int *mid_index)
 {
-	int check_min;
-	int i;
-	
+	int	check_min;
+	int	i;
+
 	*mid_index = s->stack_a_len / 2;
 	if (s->stack_a[s->stack_a_len - 1] < nbr && s->stack_a[0] > nbr)
 		return (0);
@@ -36,12 +36,12 @@ int	ft_nexnbr_index_a(int nbr, t_stack *s, int *mid_index)
 	return (i);
 }
 
-int moves_in_a(int nbr, t_stack *s, t_passed *k)
+int	moves_in_a(int nbr, t_stack *s, t_passed *k)
 {
-	int i;
-	int mid_index;
+	int	i;
+	int	mid_index;
 	int	moves;
-	
+
 	i = ft_nexnbr_index_a(nbr, s, &mid_index);
 	if (i > mid_index)
 	{
@@ -57,9 +57,9 @@ int moves_in_a(int nbr, t_stack *s, t_passed *k)
 	return (moves);
 }
 
-int moves_in_b(int i, t_stack *s, t_passed *k)
+int	moves_in_b(int i, t_stack *s, t_passed *k)
 {
-	int mid_index;
+	int	mid_index;
 	int	moves;
 
 	mid_index = s->stack_b_len / 2;
@@ -94,7 +94,7 @@ void	ft_check_shared_moves(t_passed *k, int *tmp_moves)
 */
 void	ft_find_smallest_moves(t_stack *s, t_passed *k)
 {
-	int i;
+	int	i;
 	int	moves;
 	int	tmp_moves;
 

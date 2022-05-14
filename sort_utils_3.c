@@ -6,30 +6,29 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:54:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/13 12:57:41 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/14 12:46:35 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
-int ft_get_index_in_a(t_stack *s, int nbr)
+int	ft_get_index_in_a(t_stack *s, int nbr)
 {
-    int i;
+	int	i;
 
-    i = -1;
-    while (++i < s->stack_a_len)
-    {
-        if (s->stack_a[i] == nbr)
-            return (i);   
-    }
-    return (-1);
+	i = -1;
+	while (++i < s->stack_a_len)
+	{
+		if (s->stack_a[i] == nbr)
+			return (i);
+	}
+	return (-1);
 }
 
 void	ft_move_to_top_of_a(t_stack *s, int i, int nbr)
 {
-	int mid_a;
-	
+	int	mid_a;
+
 	mid_a = s->stack_a_len / 2;
 	while (s->stack_a[0] != nbr)
 	{
@@ -42,8 +41,8 @@ void	ft_move_to_top_of_a(t_stack *s, int i, int nbr)
 
 void	ft_move_to_top_of_b(t_stack *s, int i, int nbr)
 {
-	int mid_b;
-	
+	int	mid_b;
+
 	mid_b = s->stack_b_len / 2;
 	while (s->stack_b[0] != nbr)
 	{
@@ -56,7 +55,7 @@ void	ft_move_to_top_of_b(t_stack *s, int i, int nbr)
 
 void	ft_move_both(t_stack *s, int len, char *move_type, t_passed *k)
 {
-	int j;
+	int	j;
 
 	j = -1;
 	while (++j < len)

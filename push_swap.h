@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/13 19:00:46 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/14 13:48:33 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "./ft_printf/ft_printf.h"
 # include "./get_next_line/get_next_line.h"
 
-# define RR_BOTH 12
+# define MAX 2147483647
 
 typedef struct s_stack
 {
@@ -63,9 +63,9 @@ void	ft_sort_five(t_stack *s);
 void	ft_sort_general(t_stack *s);
 
 // those exist in the instructions_x.c files.
-void 	ft_sa(t_stack *s, int w);
-void 	ft_sb(t_stack *s, int w);
-void 	ft_ss(t_stack *s, int w);
+void	ft_sa(t_stack *s, int w);
+void	ft_sb(t_stack *s, int w);
+void	ft_ss(t_stack *s, int w);
 void	ft_pb(t_stack *s, int w);
 void	ft_pa(t_stack *s, int w);
 void	ft_ra(t_stack *s, int w);
@@ -86,11 +86,11 @@ int		ft_get_min(int *list, int list_len);
 void	ft_exit(t_stack *s, int status);
 int		ft_atoi(const char *str, t_stack *s);
 void	ft_check_dup(t_stack *s);
-void	ft_is_sorted(t_stack *s);
-void	ft_init_stack(t_stack *s);
+void	ft_is_sorted(t_stack *s, int w);
+void	ft_init_stack(t_stack *s, int w);
 
 // functions used in the sort_utils_0.c file
-int		ft_gIn(t_stack *s, int nbr);
+int		ft_ind(t_stack *s, int nbr);
 int		ft_check_element_list(t_stack *s, int i);
 void	ft_bring_element_list(t_stack *s, t_chosn *chosen);
 t_chosn	ft_find_chosen_list(t_stack *s);
