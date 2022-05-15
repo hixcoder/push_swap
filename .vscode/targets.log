@@ -8,7 +8,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This program built for i386-apple-darwin11.3.0
  
 
-# Make data base, printed on Sun May 15 09:26:48 2022
+# Make data base, printed on Sun May 15 13:29:15 2022
 
 # Variables
 
@@ -43,7 +43,7 @@ OTHER_OBJ = ${OTHER_SRCS:.c=.o}
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-567fecc6-2e2a-4385-8ccb-a26de0fd7a3b.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000cdf80033bk/T/vscode-ipc-265a7044-a32e-4910-9b16-e9f02d4cb5ec.sock
 # environment
 VSCODE_CWD = /
 # makefile (from `Makefile', line 27)
@@ -105,6 +105,7 @@ FT_PRINTF_FOLDER = ./ft_printf/
 # environment
 SHLVL = 1
 # makefile (from `Makefile', line 36)
+ 
 CC = cc 
 # environment
 DEV_TOOLS = /Users/hboumahd/goinfre/devtools
@@ -189,11 +190,11 @@ VSCODE_PID = 90348
 
 # Directories
 
-# . (device 16777227, inode 1978551): 45 files, no impossibilities.
-# get_next_line (device 16777227, inode 1951006): 6 files, no impossibilities so far.
-# ft_printf (device 16777227, inode 1978868): 14 files, no impossibilities so far.
+# . (device 16777227, inode 1978551): 36 files, no impossibilities.
+# get_next_line (device 16777227, inode 1951006): 4 files, no impossibilities so far.
+# ft_printf (device 16777227, inode 1978868): 4 files, no impossibilities so far.
 
-# 65 files, no impossibilities in 3 directories.
+# 44 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -209,7 +210,7 @@ VSCODE_PID = 90348
 stack_init.o: stack_init.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `stack_init'
-#  Last modified 2022-05-14 21:41:48
+#  Last modified 2022-05-15 12:42:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -219,34 +220,10 @@ stack_init.o: stack_init.c push_swap.h ft_printf/ft_printf.h get_next_line/get_n
 	
 
 # Not a target:
-sort_utils_3.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-14 12:46:35
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-sort_utils_0.o: sort_utils_0.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `sort_utils_0'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
-
-# Not a target:
-push_swap.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-14 22:00:45
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+sort_utils_0.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 get_next_line/get_next_line.h:
@@ -260,13 +237,12 @@ get_next_line/get_next_line.h:
 # Not a target:
 sort_general.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 12:48:36
+#  Last modified 2022-05-15 11:13:47
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
- 
 b: stack_init.o push_swap_utils.o instructions_0.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o sort_general.o sort_utils_0.o sort_utils_1.o sort_utils_2.o sort_utils_3.o ft_printf/ft_printf.o ft_printf/ft_putchar.o ft_printf/ft_putnbr_base.o ft_printf/ft_putstr.o ft_printf/ft_putnbr_base2.o ft_printf/ft_putnbr.o get_next_line/get_next_line.o get_next_line/get_next_line_utils.o checker.o
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -297,26 +273,37 @@ m: push_swap
 sort_general.o: sort_general.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_general'
-#  Last modified 2022-05-14 21:56:54
+#  File does not exist.
 #  File has been updated.
-#  Successfully updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := sort_general.o
+# automatic
+# % := 
+# automatic
+# * := sort_general
+# automatic
+# + := sort_general.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
+# automatic
+# | := 
+# automatic
+# < := sort_general.c
+# automatic
+# ^ := sort_general.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
+ 
+# automatic
+# ? := sort_general.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
 #  commands to execute (from `Makefile', line 39):
 	$(CC) ${FLAGS} -c $< -o $@
 	
 
-sort_utils_1.o: sort_utils_1.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `sort_utils_1'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
+# Not a target:
+sort_utils_1.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 instructions_3.c:
@@ -330,7 +317,7 @@ instructions_3.c:
 instructions_0.o: instructions_0.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `instructions_0'
-#  Last modified 2022-05-14 21:41:48
+#  Last modified 2022-05-15 12:42:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -342,44 +329,23 @@ instructions_0.o: instructions_0.c push_swap.h ft_printf/ft_printf.h get_next_li
 # Not a target:
 push_swap.h:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 13:48:33
+#  Last modified 2022-05-15 11:26:52
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-get_next_line/get_next_line_utils.o: get_next_line/get_next_line_utils.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `get_next_line/get_next_line_utils'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
 
 # Not a target:
-ft_printf/ft_putnbr_base.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-03 23:22:19
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+get_next_line/get_next_line_utils.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-ft_printf/ft_printf.o: ft_printf/ft_printf.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ft_printf/ft_printf'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
+# Not a target:
+ft_printf/ft_printf.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .SUFFIXES:
@@ -387,17 +353,11 @@ ft_printf/ft_printf.o: ft_printf/ft_printf.c push_swap.h ft_printf/ft_printf.h g
 #  Modification time never checked.
 #  File has not been updated.
 
-ft_printf/ft_putnbr_base2.o: ft_printf/ft_putnbr_base2.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ft_printf/ft_putnbr_base2'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
+# Not a target:
+ft_printf/ft_putnbr_base2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 Makefile:
@@ -411,19 +371,7 @@ Makefile:
 instructions_1.o: instructions_1.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `instructions_1'
-#  Last modified 2022-05-14 21:58:53
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
-
-ft_printf/ft_putstr.o: ft_printf/ft_putstr.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ft_printf/ft_putstr'
-#  Last modified 2022-05-14 21:56:54
+#  Last modified 2022-05-15 12:42:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -433,30 +381,21 @@ ft_printf/ft_putstr.o: ft_printf/ft_putstr.c push_swap.h ft_printf/ft_printf.h g
 	
 
 # Not a target:
-ft_printf/ft_putnbr.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-03 23:22:19
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+ft_printf/ft_putstr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-sort_utils_2.o: sort_utils_2.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `sort_utils_2'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
+# Not a target:
+sort_utils_2.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 push_swap_utils.o: push_swap_utils.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `push_swap_utils'
-#  Last modified 2022-05-14 21:41:48
+#  Last modified 2022-05-15 12:42:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -468,38 +407,22 @@ push_swap_utils.o: push_swap_utils.c push_swap.h ft_printf/ft_printf.h get_next_
 # Not a target:
 stack_init.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 21:16:06
+#  Last modified 2022-05-15 09:39:22
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-ft_printf/ft_putchar.o: ft_printf/ft_putchar.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
- 
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ft_printf/ft_putchar'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
 
 # Not a target:
-sort_utils_0.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-14 12:44:32
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+ft_printf/ft_putchar.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 instructions_2.o: instructions_2.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `instructions_2'
-#  Last modified 2022-05-14 21:56:54
+#  Last modified 2022-05-15 12:42:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -516,19 +439,10 @@ fclean: clean
 	@rm -f $(NAME) $(CHECKER)
 	
 
-# Not a target:
-sort_utils_1.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-14 12:45:33
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
 sort_five.o: sort_five.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `sort_five'
-#  Last modified 2022-05-14 21:56:54
+#  Last modified 2022-05-15 12:42:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -547,34 +461,10 @@ instructions_0.c:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-get_next_line/get_next_line_utils.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-23 19:30:21
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-get_next_line/get_next_line.o: get_next_line/get_next_line.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `get_next_line/get_next_line'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
-
-# Not a target:
-ft_printf/ft_printf.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-03 23:22:19
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+get_next_line/get_next_line.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # Not a target:
 .DEFAULT:
@@ -583,18 +473,9 @@ ft_printf/ft_printf.c:
 #  File has not been updated.
 
 # Not a target:
-ft_printf/ft_putnbr_base2.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-03 23:22:19
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 instructions_1.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 21:58:21
+#  Last modified 2022-05-15 10:59:22
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -605,15 +486,6 @@ checker.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
-
-# Not a target:
-ft_printf/ft_putstr.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-03-03 23:22:19
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 re: fclean all
 #  Implicit rule search has not been done.
@@ -629,66 +501,29 @@ clean:
 	
 
 # Not a target:
-sort_utils_2.c:
+push_swap_utils.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-05-14 12:52:24
+#  Last modified 2022-05-15 10:45:23
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-push_swap_utils.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-14 20:14:07
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
+sort_utils_3.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
-sort_utils_3.o: sort_utils_3.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `sort_utils_3'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
-
-push_swap.o: push_swap.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `push_swap'
-#  Last modified 2022-05-14 21:59:54
-#  File has been updated.
-#  Needs to be updated (-q is set).
-# automatic
-# @ := push_swap.o
-# automatic
-# % := 
-# automatic
-# * := push_swap
-# automatic
-# + := push_swap.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-# automatic
-# | := 
-# automatic
-# < := push_swap.c
-# automatic
-# ^ := push_swap.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-# automatic
-# ? := push_swap.c
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
+# Not a target:
+push_swap.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 push_swap: stack_init.o push_swap_utils.o instructions_0.o instructions_1.o instructions_2.o instructions_3.o sort_three.o sort_five.o sort_general.o sort_utils_0.o sort_utils_1.o sort_utils_2.o sort_utils_3.o ft_printf/ft_printf.o ft_printf/ft_putchar.o ft_printf/ft_putnbr_base.o ft_printf/ft_putstr.o ft_printf/ft_putnbr_base2.o ft_printf/ft_putnbr.o get_next_line/get_next_line.o get_next_line/get_next_line_utils.o push_swap.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-05-14 21:59:54
+#  File does not exist.
 #  File has been updated.
 #  Needs to be updated (-q is set).
 # variable set hash-table stats:
@@ -712,15 +547,6 @@ ft_printf/ft_printf.h:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
-ft_printf/ft_putchar.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-05-13 12:00:21
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-# Not a target:
 instructions_2.c:
 #  Implicit rule search has been done.
 #  Last modified 2022-05-14 12:13:01
@@ -732,12 +558,12 @@ instructions_2.c:
 instructions_3.o: instructions_3.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: `instructions_3'
-#  Last modified 2022-05-14 21:56:54
+#  Last modified 2022-05-15 12:42:19
+ 
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
- 
 #  commands to execute (from `Makefile', line 39):
 	$(CC) ${FLAGS} -c $< -o $@
 	
@@ -760,10 +586,16 @@ sort_three.c:
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
-ft_printf/ft_putnbr_base.o: ft_printf/ft_putnbr_base.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
+# Not a target:
+ft_printf/ft_putnbr_base.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+sort_three.o: sort_three.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
 #  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ft_printf/ft_putnbr_base'
-#  Last modified 2022-05-14 21:56:54
+#  Implicit/static pattern stem: `sort_three'
+#  Last modified 2022-05-15 12:42:19
 #  File has been updated.
 #  Successfully updated.
 # variable set hash-table stats:
@@ -773,40 +605,13 @@ ft_printf/ft_putnbr_base.o: ft_printf/ft_putnbr_base.c push_swap.h ft_printf/ft_
 	
 
 # Not a target:
-get_next_line/get_next_line.c:
-#  Implicit rule search has been done.
-#  Last modified 2022-02-23 19:30:21
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-
-sort_three.o: sort_three.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `sort_three'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
-
-ft_printf/ft_putnbr.o: ft_printf/ft_putnbr.c push_swap.h ft_printf/ft_printf.h get_next_line/get_next_line.h
-#  Implicit rule search has been done.
-#  Implicit/static pattern stem: `ft_printf/ft_putnbr'
-#  Last modified 2022-05-14 21:56:54
-#  File has been updated.
-#  Successfully updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
-#  commands to execute (from `Makefile', line 39):
-	$(CC) ${FLAGS} -c $< -o $@
-	
+ft_printf/ft_putnbr.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
 
 # files hash-table stats:
-# Load=58/1024=6%, Rehash=0, Collisions=9/318=3%
+# Load=45/1024=4%, Rehash=0, Collisions=9/188=5%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -818,6 +623,6 @@ ft_printf/ft_putnbr.o: ft_printf/ft_putnbr.c push_swap.h ft_printf/ft_printf.h g
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Sun May 15 09:26:48 2022
+# Finished Make data base on Sun May 15 13:29:15 2022
 
  
