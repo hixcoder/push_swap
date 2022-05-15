@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 10:13:41 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/14 14:06:52 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/15 09:39:22 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,25 @@ void	ft_exit(t_stack *s, int status)
 		free(s->stack_a);
 		exit(0);
 	}
-	else
+	else if (status == 1)
 	{
 		write(2, "Error\n", 6);
 		free(s->stack_a);
+		free(s->stack_b);
+		free(s->stack_sorted);
+		s->stack_a = NULL;
+		s->stack_b = NULL;
+		s->stack_sorted = NULL;
 		exit(1);
+	}
+	else if (status == 2)
+	{
+		free(s->stack_a);
+		free(s->stack_b);
+		free(s->stack_sorted);
+		s->stack_a = NULL;
+		s->stack_b = NULL;
+		s->stack_sorted = NULL;
 	}
 }
 

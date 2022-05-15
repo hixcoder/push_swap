@@ -6,18 +6,17 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:54:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/14 12:52:24 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/15 12:02:12 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_nexnbr_index_a(int nbr, t_stack *s, int *mid_index)
+int	ft_nexnbr_index_a(t_stack *s, int nbr)
 {
 	int	check_min;
 	int	i;
 
-	*mid_index = s->stack_a_len / 2;
 	if (s->stack_a[s->stack_a_len - 1] < nbr && s->stack_a[0] > nbr)
 		return (0);
 	check_min = 1;
@@ -42,7 +41,8 @@ int	moves_in_a(int nbr, t_stack *s, t_passed *k)
 	int	mid_index;
 	int	moves;
 
-	i = ft_nexnbr_index_a(nbr, s, &mid_index);
+	mid_index = s->stack_a_len / 2;
+	i = ft_nexnbr_index_a(s, nbr);
 	if (i > mid_index)
 	{
 		k->a_move_type = "rrr_both";
@@ -89,8 +89,10 @@ void	ft_check_shared_moves(t_passed *k, int *tmp_moves)
 		*tmp_moves = *tmp_moves - shared_moves;
 }
 
-/* I used this line: tmp_moves = moves_in_a(s->stack_b[k->go_to], s, k);
-* only for know the right value of k->your_place .
+/* I used this line 118:
+* tmp_moves = moves_in_a(s->stack_b[k->go_to], s, k);
+* for: 
+* know the right value of k->your_place.
 */
 void	ft_find_smallest_moves(t_stack *s, t_passed *k)
 {
@@ -99,7 +101,7 @@ void	ft_find_smallest_moves(t_stack *s, t_passed *k)
 	int	tmp_moves;
 
 	i = -1;
-	moves = 2147483647;
+	moves = MAX;
 	while (++i < s->stack_b_len)
 	{
 		tmp_moves = moves_in_a(s->stack_b[i], s, k) + moves_in_b(i, s, k);

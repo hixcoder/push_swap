@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/21 09:54:53 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/14 12:46:35 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/15 12:14:53 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,12 +53,12 @@ void	ft_move_to_top_of_b(t_stack *s, int i, int nbr)
 	}
 }
 
-void	ft_move_both(t_stack *s, int len, char *move_type, t_passed *k)
+void	ft_move_both(t_stack *s, int shared_moves, char *move_type, t_passed *k)
 {
 	int	j;
 
 	j = -1;
-	while (++j < len)
+	while (++j < shared_moves)
 	{
 		if (ft_memcmp(move_type, "rr_both", sizeof(char) * 7) == 0)
 		{

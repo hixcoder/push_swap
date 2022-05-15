@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:14 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/14 13:48:12 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/15 12:25:38 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	main(int ac, char **av)
 			ft_sort_five(&s);
 		else
 			ft_sort_general(&s);
+		ft_exit(&s, 2);
 	}
 	else
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 09:19:38 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/14 13:48:33 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/15 11:26:52 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ int		ft_is_in_chosen(t_chosn chosen, int nbr);
 void	ft_push_the_unchosen_to_b(t_stack *s, t_chosn chosen);
 
 // functions used in the sort_utils_2.c file
-int		ft_nexnbr_index_a(int nbr, t_stack *s, int *mid_index);
+int		ft_nexnbr_index_a(t_stack *s, int nbr);
 int		moves_in_a(int nbr, t_stack *s, t_passed *k);
 int		moves_in_b(int i, t_stack *s, t_passed *k);
 void	ft_check_shared_moves(t_passed *k, int *tmp_moves);

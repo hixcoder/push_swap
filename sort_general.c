@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 18:44:06 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/14 12:48:36 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/15 11:13:47 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ void	ft_sort_general(t_stack *s)
 	chosen = ft_find_chosen_list(s);
 	ft_push_the_unchosen_to_b(s, chosen);
 	free(chosen.list);
+	chosen.list == NULL;
 	ft_from_b_to_a(s);
 }

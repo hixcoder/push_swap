@@ -71,10 +71,7 @@ void	ft_sortalgo(t_stack *s)
 	s->sorted_len = s->stack_a_len;
 	s->stack_sorted = (int *) malloc(sizeof(int) * s->stack_a_len);
 	if (s->stack_sorted == NULL)
-	{
-		free(s->stack_sorted);
-		exit(1);
-	}
+		ft_exit(s, 1);
 	ft_memcpy(s->stack_sorted, s->stack_a, sizeof(int) * s->stack_a_len);
 	i = -1;
 	while (++i < s->stack_a_len)

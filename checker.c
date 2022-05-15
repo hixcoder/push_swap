@@ -6,7 +6,7 @@
 /*   By: hboumahd <hboumahd@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 11:07:30 by hboumahd          #+#    #+#             */
-/*   Updated: 2022/05/14 12:01:57 by hboumahd         ###   ########.fr       */
+/*   Updated: 2022/05/15 09:58:12 by hboumahd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,9 @@ void	ft_read_instr(t_stack *s)
 	{
 		ft_make_instr(line, s);
 		line = get_next_line(0);
-		if (!line)
-			break ;
 		free(line);
 	}
-	return ;
+	line = NULL;
 }
 
 int	main(int ac, char **av)
@@ -81,6 +79,7 @@ int	main(int ac, char **av)
 		ft_init_stack(&s, 1);
 		ft_read_instr(&s);
 		ft_checker(&s);
+		ft_exit(&s, 2);
 	}
 	else
 		return (0);
